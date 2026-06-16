@@ -546,6 +546,92 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9000;
 }
 
 
+
+/* ── PICKUP SECTION ── */
+.pickup-section{
+  max-width:1160px;margin:0 auto;padding:0 14px 56px;
+}
+.pickup-inner{
+  position:relative;overflow:hidden;
+  background:var(--d1);
+  border:1px solid rgba(255,230,0,.18);
+  clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));
+  padding:32px 36px;
+  display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;
+}
+.pickup-inner::before{
+  content:'';position:absolute;top:0;left:0;width:4px;height:100%;
+  background:linear-gradient(to bottom,var(--y),var(--g));
+}
+.pickup-label-wrap{display:flex;flex-direction:column;align-items:center;gap:8px;flex-shrink:0;}
+.pickup-label-text{
+  font-family:'Black Han Sans',sans-serif;
+  font-size:clamp(22px,3vw,32px);letter-spacing:.25em;
+  writing-mode:vertical-rl;text-orientation:upright;
+  color:var(--y);line-height:1;
+  text-shadow:0 0 20px rgba(255,230,0,.4);
+}
+.pickup-label-en{
+  font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.32em;
+  color:rgba(255,230,0,.45);text-transform:uppercase;
+  writing-mode:horizontal-tb;
+}
+.pickup-content{display:flex;flex-direction:column;gap:14px;}
+.pickup-video-link{
+  display:block;position:relative;
+  aspect-ratio:9/16;width:min(200px,35vw);
+  overflow:hidden;background:#111;
+  clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);
+  border:1px solid rgba(255,230,0,.15);
+  transition:transform .25s,border-color .25s;
+  -webkit-tap-highlight-color:transparent;
+  align-self:flex-start;
+}
+.pickup-video-link:hover{transform:scale(1.03);border-color:rgba(255,230,0,.5);}
+.pickup-thumb{width:100%;height:100%;object-fit:cover;filter:brightness(.82);transition:filter .3s;display:block;}
+.pickup-video-link:hover .pickup-thumb{filter:brightness(1);}
+.pickup-play-icon{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.25);transition:background .25s;
+}
+.pickup-play-icon::before{
+  content:'▶';font-size:28px;color:var(--y);
+  text-shadow:0 0 16px rgba(255,230,0,.9);
+  opacity:0;transition:opacity .25s;
+}
+.pickup-video-link:hover .pickup-play-icon{background:rgba(0,0,0,.45);}
+.pickup-video-link:hover .pickup-play-icon::before{opacity:1;}
+.pickup-body{display:flex;flex-direction:column;gap:12px;justify-content:center;}
+.pickup-badge{
+  display:inline-block;
+  font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.32em;
+  color:var(--g);border:1px solid rgba(57,255,20,.35);
+  padding:2px 10px;text-transform:uppercase;
+}
+.pickup-title{
+  font-family:'Black Han Sans',sans-serif;
+  font-size:clamp(14px,2.5vw,20px);letter-spacing:.08em;line-height:1.5;
+  color:var(--w);
+}
+.pickup-cta{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:'Black Han Sans',sans-serif;font-size:12px;letter-spacing:.12em;
+  color:rgba(255,230,0,.6);transition:color .2s;
+}
+.pickup-cta:hover{color:var(--y);}
+
+/* 横並び（動画+テキスト） */
+.pickup-flex{display:flex;gap:24px;align-items:flex-start;}
+
+@media(max-width:600px){
+  .pickup-inner{grid-template-columns:1fr;padding:24px 18px;gap:18px;}
+  .pickup-label-wrap{flex-direction:row;align-items:center;}
+  .pickup-label-text{writing-mode:horizontal-tb;font-size:20px;letter-spacing:.2em;}
+  .pickup-label-en{writing-mode:horizontal-tb;}
+  .pickup-flex{flex-direction:column;gap:14px;}
+  .pickup-video-link{width:100%;aspect-ratio:9/16;max-width:200px;}
+}
+
 /* ── FAN POST SECTION ── */
 .fanpost-section{
   max-width:1160px;margin:0 auto 0;padding:0 14px 56px;
@@ -805,7 +891,7 @@ footer small{font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.1em;}
     <div class="next-live">
       <div class="next-live-dot"></div>
       <div class="next-live-label">NEXT LIVE</div>
-      <div class="next-live-date"><span class="date-highlight">6月10日（水）</span>&nbsp;22:00〜</div>
+      <div class="next-live-date"><span class="date-highlight">6月17日（水）</span>&nbsp;22:00〜</div>
     </div>
   </div>
   <div class="hero-cta">
@@ -817,7 +903,7 @@ footer small{font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.1em;}
 
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker">
-    <span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span>次回配信 6/10（水）22:00〜</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span><span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span>次回配信 6/10（水）22:00〜</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span>
+    <span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span>次回配信 6/17（水）22:00〜</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span><span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span>次回配信 6/17（水）22:00〜</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span>
   </div>
 </div>
 
@@ -833,19 +919,19 @@ footer small{font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.1em;}
       <div class="latest-title">最新動画・配信</div>
     </div>
     <!-- ▼ 最新動画を更新する場合: VIDEO_ID と TITLE を書き換える -->
-    <a href="https://www.youtube.com/watch?v=9Kyy6gVGl7g"
+    <a href="https://www.youtube.com/watch?v=XxoVwWlukzM"
        target="_blank" rel="noopener"
        class="latest-thumb-link">
       <div class="latest-thumb-wrap">
         <img
-          src="https://i.ytimg.com/vi/9Kyy6gVGl7g/maxresdefault.jpg"
-          alt="RAFT #4アフタートーク"
+          src="https://i.ytimg.com/vi/XxoVwWlukzM/maxresdefault.jpg"
+          alt="【ここボク】LIVE配信"
           class="latest-thumb-img"
           loading="lazy"
-          onerror="this.src='https://i.ytimg.com/vi/9Kyy6gVGl7g/hqdefault.jpg'">
+          onerror="this.src='https://i.ytimg.com/vi/XxoVwWlukzM/hqdefault.jpg'">
         <div class="latest-thumb-overlay">
           <div class="latest-play-btn">▶</div>
-          <div class="latest-thumb-title">RAFT #4アフタートーク</div>
+          <div class="latest-thumb-title">【ここボク】LIVE配信</div>
         </div>
       </div>
     </a>
@@ -853,6 +939,39 @@ footer small{font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.1em;}
       <a href="https://www.youtube.com/@KOKOBOKUBGM" target="_blank" rel="noopener" class="btn-outline">
         <span>▶ チャンネルで全動画を見る</span>
       </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+   PICKUP SECTION
+   ▼ 動画を変更する場合: pickup_vid と pickup_url と pickup_thumb を書き換える
+   ============================================================ -->
+<div class="pickup-section">
+  <div class="pickup-inner reveal">
+    <div class="pickup-label-wrap">
+      <div class="pickup-label-text">PICK UP</div>
+      <div class="pickup-label-en">注目</div>
+    </div>
+    <div class="pickup-content">
+      <div class="pickup-flex">
+        <a href="https://www.youtube.com/shorts/jgDWWx4wnHY" target="_blank" rel="noopener" class="pickup-video-link">
+          <img class="pickup-thumb"
+               src="https://i.ytimg.com/vi/jgDWWx4wnHY/hqdefault.jpg"
+               alt="PICK UP動画"
+               loading="lazy"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/jgDWWx4wnHY/mqdefault.jpg'">
+          <div class="pickup-play-icon"></div>
+        </a>
+        <div class="pickup-body">
+          <div class="pickup-badge">📌 SHORT PICK UP</div>
+          <div class="pickup-title">みんなクマ牧場って知ってる？</div>
+          <a href="https://www.youtube.com/shorts/jgDWWx4wnHY" target="_blank" rel="noopener" class="pickup-cta">
+            YouTubeで見る →
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -1131,9 +1250,9 @@ footer small{font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.1em;}
     <p class="radio-intro">毎週投稿中のここラジ（ラジオ動画）アーカイブ。過去回もここからチェック！</p>
     <div class="radio-grid">
 
-      <a href="https://youtu.be/9Kyy6gVGl7g" target="_blank" rel="noopener" class="radio-card">
+      <a href="https://youtu.be/XxoVwWlukzM" target="_blank" rel="noopener" class="radio-card">
         <div class="radio-thumb-wrap">
-          <img class="radio-thumb" src="https://i.ytimg.com/vi/9Kyy6gVGl7g/hqdefault.jpg" alt="第六回" loading="lazy">
+          <img class="radio-thumb" src="https://i.ytimg.com/vi/XxoVwWlukzM/hqdefault.jpg" alt="第六回" loading="lazy">
           <div class="radio-play"></div>
           <span class="radio-badge">NEW</span>
         </div>
@@ -1727,6 +1846,7 @@ document.querySelectorAll('[data-close]').forEach(el=>{
   el.addEventListener('click',closeModal);
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
 
 function initReveal(){
   const els=document.querySelectorAll('.reveal:not(.in)');
