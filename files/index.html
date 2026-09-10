@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ここからはじまるボクらの世界〜BGMうるさいすねぇ〜 | BGM NOISY</title>
+<meta name="description" content="ここからはじまるボクらの世界〜BGMうるさいすねぇ〜【ここボク】男5人組ゲーム実況グループ。毎週どこかの曜日22:00〜YouTubeでLIVE配信！">
+<meta name="keywords" content="ここボク,ここからはじまるボクらの世界,BGM NOISY,ゲーム実況,YouTube,をやつ,のじもん,のやみぃ,とこ,ちワ">
+<meta name="author" content="ここボク / BGM NOISY">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ここからはじまるボクらの世界〜BGMうるさいすねぇ〜">
+<meta property="og:title" content="ここからはじまるボクらの世界〜BGMうるさいすねぇ〜 | BGM NOISY">
+<meta property="og:description" content="男5人組ゲーム実況グループ。毎週どこかの曜日22:00〜YouTubeでLIVE配信中！">
+<meta property="og:url" content="https://woyatsu.github.io/kokobokuBGM/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@kokoboku_1009">
+<meta property="og:image" content="https://woyatsu.github.io/kokobokuBGM/images/ogp.jpg">
+<meta name="twitter:image" content="https://woyatsu.github.io/kokobokuBGM/images/ogp.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+<script>
+/* ============================================================
+   配信スケジュール設定 — ここだけ変更すればOK
+   日時が決まった場合: NEXT_LIVE_DATE = "8月1日（木）" などに変更
+   未定の場合:         NEXT_LIVE_DATE = "" のままにする
+   ============================================================ */
+const NEXT_LIVE_DATE = ""; // 例: "8月1日（木）"
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+JP:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --y:#FFE600;--g:#39FF14;--bk:#0a0a0a;
+  --d1:#141414;--d2:#1c1c1c;--w:#ffffff;
+  --txt-muted:rgba(255,255,255,.5);
+  --border:rgba(255,230,0,.12);
+  --nav-h:56px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+body{background:var(--bk);color:var(--w);font-family:'Noto Sans JP',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9000;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.05) 3px,rgba(0,0,0,.05) 4px);}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:800;height:var(--nav-h);padding:0 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,.94);border-bottom:1px solid var(--border);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
+.nav-logo{font-family:'Black Han Sans',sans-serif;font-size:13px;letter-spacing:.3em;color:var(--y);flex-shrink:0;}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{display:block;padding:0 14px;line-height:var(--nav-h);font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--txt-muted);text-transform:uppercase;border-left:1px solid rgba(255,255,255,.04);transition:color .2s,background .2s;}
+.nav-links li:last-child a{border-right:1px solid rgba(255,255,255,.04);}
+.nav-links a:hover{color:var(--y);background:rgba(255,230,0,.04);}
+.nav-links .nav-yt{color:rgba(255,230,0,.6);}
+.nav-links .nav-obenri{color:rgba(57,255,20,.7);}
+.nav-links .nav-obenri:hover{color:var(--g);}
+.nav-links .nav-yt:hover{color:var(--y);}
+.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;flex-shrink:0;background:none;border:1px solid rgba(255,230,0,.3);cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.hamburger span{display:block;width:20px;height:2px;background:var(--y);border-radius:1px;transition:transform .28s ease,opacity .28s ease;pointer-events:none;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.nav-drawer{position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(8,8,8,.98);border-bottom:2px solid rgba(255,230,0,.15);z-index:799;padding:4px 0 12px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transform:translateY(-6px);opacity:0;visibility:hidden;transition:transform .26s ease,opacity .26s ease,visibility .26s;}
+.nav-drawer.open{transform:translateY(0);opacity:1;visibility:visible;}
+.nav-drawer a{display:flex;align-items:center;padding:15px 28px;font-family:'Black Han Sans',sans-serif;font-size:16px;letter-spacing:.18em;color:rgba(255,255,255,.55);border-bottom:1px solid rgba(255,255,255,.04);transition:color .18s,background .18s;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.nav-drawer a:last-child{border-bottom:none;}
+.nav-drawer a:active{color:var(--y);background:rgba(255,230,0,.06);}
+.nav-drawer .drawer-yt{color:rgba(255,230,0,.65);}
+
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:calc(var(--nav-h) + 40px) 20px 60px;text-align:center;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 45%,rgba(255,230,0,.07) 0%,transparent 70%),radial-gradient(ellipse 35% 35% at 15% 85%,rgba(57,255,20,.04) 0%,transparent 60%),var(--bk);}
+.hero-grid{position:absolute;inset:0;opacity:.6;background-image:linear-gradient(rgba(255,230,0,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,230,0,.018) 1px,transparent 1px);background-size:60px 60px;}
+.glitch-bar{position:absolute;height:1px;width:100%;background:linear-gradient(90deg,transparent,var(--y) 40%,var(--g) 60%,transparent);animation:glitchBar 6s infinite;opacity:0;}
+@keyframes glitchBar{0%,100%{top:10%;opacity:0;}5%{opacity:.35;}12%{opacity:0;top:12%;}52%{top:68%;opacity:0;}58%{opacity:.25;}65%{opacity:0;}}
+.logo-wrap{position:relative;z-index:2;animation:logoIn .9s cubic-bezier(.16,1,.3,1) both;}
+@keyframes logoIn{from{transform:scale(.6) translateY(40px);opacity:0;filter:blur(14px);}to{transform:scale(1);opacity:1;filter:blur(0);}}
+.logo-wrap img{width:min(360px,80vw);filter:drop-shadow(0 0 26px rgba(255,230,0,.55)) drop-shadow(0 0 52px rgba(57,255,20,.2));animation:logoPulse 3.5s ease-in-out infinite;}
+@keyframes logoPulse{0%,100%{filter:drop-shadow(0 0 26px rgba(255,230,0,.55)) drop-shadow(0 0 52px rgba(57,255,20,.2));}50%{filter:drop-shadow(0 0 48px rgba(255,230,0,.9)) drop-shadow(0 0 78px rgba(57,255,20,.4));}}
+.hero-sub{position:relative;z-index:2;margin-top:24px;animation:fadeUp 1s .3s both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.hero-tag{display:inline-block;font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.35em;color:var(--y);border:1px solid rgba(255,230,0,.35);padding:4px 12px;margin-bottom:12px;text-transform:uppercase;}
+.hero-copy{font-size:clamp(12px,2.2vw,15px);color:var(--txt-muted);letter-spacing:.04em;line-height:1.9;}
+.hero-title-full{display:block;font-family:'Black Han Sans',sans-serif;font-size:clamp(10px,1.8vw,13px);letter-spacing:.1em;color:rgba(255,255,255,.3);margin-top:8px;}
+.hero-schedule{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-family:'Black Han Sans',sans-serif;font-size:clamp(11px,2vw,15px);letter-spacing:.08em;color:var(--bk);background:var(--y);padding:8px 18px;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);white-space:nowrap;}
+
+/* ── NEXT LIVE SCHEDULE ── */
+.next-live{
+  position:relative;z-index:2;
+  display:inline-flex;align-items:center;gap:12px;
+  margin-top:16px;
+  background:rgba(0,0,0,.55);
+  border:1px solid rgba(255,230,0,.3);
+  padding:10px 20px;
+  clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);
+}
+.next-live-label{
+  font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.38em;
+  color:rgba(255,230,0,.6);text-transform:uppercase;white-space:nowrap;
+}
+.next-live-date{
+  font-family:'Black Han Sans',sans-serif;font-size:clamp(12px,2.2vw,16px);
+  letter-spacing:.1em;color:var(--w);white-space:nowrap;
+}
+.next-live-date .date-highlight{color:var(--y);}
+.next-live-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--y);flex-shrink:0;
+  box-shadow:0 0 8px rgba(255,230,0,.9);
+  animation:liveDot 1.3s ease-in-out infinite;
+}
+@media(max-width:600px){
+  .next-live{padding:8px 14px;gap:8px;}
+  .next-live-label{font-size:8px;letter-spacing:.22em;}
+}
+
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--g);flex-shrink:0;box-shadow:0 0 6px var(--g);animation:liveDot 1.3s ease-in-out infinite;}
+@keyframes liveDot{0%,100%{opacity:1;}50%{opacity:.15;}}
+.hero-cta{position:relative;z-index:2;margin-top:24px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;animation:fadeUp 1s .55s both;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--y);color:var(--bk);font-family:'Black Han Sans',sans-serif;font-size:13px;letter-spacing:.1em;padding:11px 20px;position:relative;overflow:hidden;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);transition:transform .2s,box-shadow .2s;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.btn-primary::before{content:'';position:absolute;inset:0;background:var(--g);transform:translateX(-100%);transition:transform .3s;}
+.btn-primary:hover::before{transform:translateX(0);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(255,230,0,.32);}
+.btn-primary span{position:relative;z-index:1;}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--w);font-family:'Black Han Sans',sans-serif;font-size:13px;letter-spacing:.1em;padding:10px 20px;border:1px solid rgba(255,255,255,.2);clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);transition:all .2s;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.btn-outline:hover{border-color:var(--y);color:var(--y);transform:translateY(-2px);}
+.btn-sub{font-size:12px;padding:9px 18px;opacity:.85;}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:5px;opacity:.38;animation:scrollBounce 2.2s ease-in-out infinite;}
+@keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(7px);}}
+.scroll-hint span{font-family:'Oswald',sans-serif;font-size:8px;letter-spacing:.38em;color:var(--y);text-transform:uppercase;}
+.scroll-arrow{width:12px;height:12px;border-right:2px solid var(--y);border-bottom:2px solid var(--y);transform:rotate(45deg);}
+
+.ticker-wrap{overflow:hidden;background:var(--y);padding:8px 0;user-select:none;}
+.ticker{display:flex;gap:48px;animation:tickerMove 24s linear infinite;white-space:nowrap;width:max-content;}
+@keyframes tickerMove{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.ticker span{font-family:'Black Han Sans',sans-serif;font-size:11px;letter-spacing:.25em;color:var(--bk);}
+.ticker .sep{color:rgba(0,0,0,.3);}
+
+.tabs-section{max-width:1160px;margin:0 auto;padding:52px 14px 76px;}
+.tabs-nav{display:flex;border-bottom:2px solid rgba(255,230,0,.14);margin-bottom:36px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;position:sticky;top:var(--nav-h);z-index:100;background:rgba(10,10,10,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
+.tabs-nav::-webkit-scrollbar{display:none;}
+.tab-btn{flex-shrink:0;padding:11px 18px;font-family:'Black Han Sans',sans-serif;font-size:13px;letter-spacing:.16em;color:rgba(255,255,255,.32);background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;cursor:pointer;white-space:nowrap;transition:color .2s,border-color .2s;-webkit-tap-highlight-color:transparent;touch-action:manipulation;user-select:none;-webkit-user-select:none;}
+.tab-btn .en{display:block;font-size:8px;letter-spacing:.28em;opacity:.5;margin-bottom:2px;font-family:'Oswald',sans-serif;}
+.tab-btn.active{color:var(--y);border-bottom-color:var(--y);}
+.tab-btn:hover:not(.active){color:rgba(255,255,255,.7);}
+.tab-panel{display:none;animation:panelIn .32s ease both;}
+.tab-panel.active{display:block;}
+@keyframes panelIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+.members-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+.member-card{background:var(--d1);border:1px solid rgba(255,230,0,.08);padding:22px 10px 16px;text-align:center;position:relative;overflow:hidden;cursor:pointer;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));transition:transform .32s cubic-bezier(.16,1,.3,1),border-color .32s,box-shadow .32s;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.member-card:hover,.member-card:focus{transform:translateY(-5px);border-color:rgba(255,230,0,.5);box-shadow:0 14px 36px rgba(0,0,0,.5),0 0 22px rgba(255,230,0,.07);outline:none;}
+.member-card::after{content:'';position:absolute;top:0;right:0;width:10px;height:10px;background:transparent;transition:.28s;}
+.member-card:hover::after,.member-card:focus::after{background:var(--y);}
+.m-icon{width:72px;height:72px;border-radius:50%;object-fit:cover;margin:0 auto 10px;transition:transform .35s;}
+.member-card:hover .m-icon,.member-card:focus .m-icon{transform:scale(1.07);}
+.m-num{font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.3em;color:rgba(255,230,0,.42);margin-bottom:3px;}
+.m-name{font-family:'Black Han Sans',sans-serif;font-size:19px;letter-spacing:.08em;line-height:1;}
+.m-tag{display:inline-block;margin:6px 0 4px;font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.2em;color:var(--g);border:1px solid rgba(57,255,20,.28);padding:2px 7px;}
+.m-hint{font-size:9px;color:rgba(255,230,0,.38);letter-spacing:.08em;font-family:'Oswald',sans-serif;}
+
+.member-modal{display:none;position:fixed;inset:0;z-index:2000;align-items:center;justify-content:center;padding:14px;}
+.member-modal.open{display:flex;}
+.modal-overlay{position:absolute;inset:0;background:rgba(0,0,0,.84);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);}
+.modal-box{position:relative;z-index:1;background:var(--d1);border:1px solid rgba(255,230,0,.18);width:100%;max-width:580px;max-height:92vh;max-height:92svh;overflow-y:auto;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));animation:modalIn .3s cubic-bezier(.16,1,.3,1) both;scrollbar-width:thin;scrollbar-color:rgba(255,230,0,.25) transparent;}
+.modal-box::-webkit-scrollbar{width:4px;}
+.modal-box::-webkit-scrollbar-thumb{background:rgba(255,230,0,.25);border-radius:2px;}
+@keyframes modalIn{from{transform:scale(.9) translateY(20px);opacity:0;}to{transform:scale(1) translateY(0);opacity:1;}}
+.modal-close{position:absolute;top:10px;right:12px;z-index:2;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:13px;cursor:pointer;transition:all .18s;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.modal-close:hover,.modal-close:active{color:var(--y);border-color:rgba(255,230,0,.45);}
+.modal-header{display:flex;align-items:center;gap:14px;padding:22px 22px 16px;background:linear-gradient(135deg,rgba(255,230,0,.06),transparent);border-bottom:1px solid rgba(255,255,255,.06);position:relative;}
+.modal-header::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--mc,var(--y));}
+.modal-icon{width:68px;height:68px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,230,0,.2);}
+.modal-num{font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.3em;color:rgba(255,230,0,.45);margin-bottom:3px;}
+.modal-name{font-family:'Black Han Sans',sans-serif;font-size:26px;letter-spacing:.08em;line-height:1;}
+.modal-tag{display:inline-block;margin-top:6px;font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.2em;color:var(--g);border:1px solid rgba(57,255,20,.32);padding:2px 8px;}
+.modal-body{padding:18px 22px 22px;}
+.modal-section{margin-bottom:16px;}
+.modal-sec-title{font-family:'Black Han Sans',sans-serif;font-size:10px;letter-spacing:.26em;color:var(--y);margin-bottom:6px;opacity:.78;}
+.modal-section p{font-size:13px;line-height:1.85;color:rgba(255,255,255,.7);letter-spacing:.03em;}
+.modal-grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;margin-bottom:16px;}
+.modal-sns{display:flex;gap:8px;flex-wrap:wrap;}
+.modal-sns-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Black Han Sans',sans-serif;font-size:11px;letter-spacing:.12em;padding:9px 15px;border:1px solid rgba(255,255,255,.14);transition:all .18s;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%);-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.modal-sns-btn.yt{background:rgba(255,230,0,.1);color:var(--y);border-color:rgba(255,230,0,.28);}
+.modal-sns-btn.yt:hover{background:var(--y);color:var(--bk);}
+.modal-sns-btn.x{background:rgba(255,255,255,.05);color:rgba(255,255,255,.78);}
+.modal-sns-btn.x:hover{background:var(--w);color:var(--bk);}
+.modal-pickup-label{font-family:'Black Han Sans',sans-serif;font-size:10px;letter-spacing:.26em;color:var(--y);margin-bottom:8px;opacity:.78;padding-top:2px;}
+.modal-pickup-card{display:flex;gap:12px;align-items:stretch;background:var(--d2);border:1px solid rgba(255,230,0,.1);padding:10px;transition:all .22s;clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%);-webkit-tap-highlight-color:transparent;}
+.modal-pickup-card:hover,.modal-pickup-card:active{border-color:rgba(255,230,0,.38);background:rgba(255,230,0,.04);}
+.modal-pickup-thumb{position:relative;width:130px;flex-shrink:0;aspect-ratio:16/9;overflow:hidden;background:#1a1a1a;border-radius:1px;}
+.modal-pickup-thumb img{width:100%;height:100%;object-fit:cover;filter:brightness(.84);transition:filter .25s;}
+.modal-pickup-card:hover .modal-pickup-thumb img{filter:brightness(1);}
+.modal-pickup-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.32);font-size:20px;color:var(--y);text-shadow:0 0 12px rgba(255,230,0,.8);transition:background .22s;}
+.modal-pickup-card:hover .modal-pickup-play,.modal-pickup-card:active .modal-pickup-play{background:rgba(0,0,0,.52);}
+.modal-pickup-info{display:flex;flex-direction:column;justify-content:center;gap:7px;padding:2px 0;}
+.modal-pickup-badge{font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.2em;color:var(--y);border:1px solid rgba(255,230,0,.28);padding:2px 6px;display:inline-block;}
+.modal-pickup-cta{font-family:'Black Han Sans',sans-serif;font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.5);transition:color .2s;}
+.modal-pickup-card:hover .modal-pickup-cta{color:var(--y);}
+
+.tab-intro{margin-bottom:18px;font-size:12px;color:rgba(255,255,255,.36);letter-spacing:.05em;line-height:1.8;}
+.shorts-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;}
+.short-card{display:block;position:relative;overflow:hidden;aspect-ratio:9/16;background:var(--d1);border:1px solid rgba(255,255,255,.06);clip-path:polygon(0 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%);transition:transform .22s,border-color .22s;-webkit-tap-highlight-color:transparent;}
+.short-card:hover{transform:scale(1.04);border-color:rgba(255,230,0,.4);}
+.short-thumb{width:100%;height:100%;object-fit:cover;filter:brightness(.8);transition:filter .28s;}
+.short-card:hover .short-thumb{filter:brightness(1);}
+.short-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.2);transition:background .22s;}
+.short-play::before{content:'▶';font-size:22px;color:var(--y);text-shadow:0 0 16px rgba(255,230,0,.8);opacity:0;transition:opacity .22s;}
+.short-card:hover .short-play{background:rgba(0,0,0,.42);}
+.short-card:hover .short-play::before{opacity:1;}
+.badge-new{position:absolute;top:6px;left:6px;z-index:2;background:var(--g);color:var(--bk);font-family:'Black Han Sans',sans-serif;font-size:8px;letter-spacing:.16em;padding:2px 5px;line-height:1.4;}
+
+.games-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.game-card{display:block;position:relative;overflow:hidden;aspect-ratio:460/215;background:var(--d1);border:1px solid rgba(255,255,255,.06);clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%);transition:transform .22s,border-color .22s;-webkit-tap-highlight-color:transparent;}
+.game-card[href]:hover{transform:scale(1.03);border-color:rgba(255,230,0,.45);}
+.game-img{width:100%;height:100%;object-fit:cover;filter:brightness(.78);transition:filter .28s;}
+.game-card[href]:hover .game-img{filter:brightness(1);}
+.game-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:12px 8px 7px;font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.88);}
+
+/* ── KOKOBOKU ── */
+.history-wrap{max-width:700px;}
+.history-lead{font-family:'Black Han Sans',sans-serif;font-size:clamp(15px,2.8vw,21px);letter-spacing:.1em;line-height:1.6;color:var(--y);margin-bottom:4px;}
+.history-subtitle{font-size:12px;color:rgba(255,255,255,.32);letter-spacing:.14em;margin-bottom:26px;font-family:'Oswald',sans-serif;}
+.history-body{border-left:2px solid rgba(255,230,0,.17);padding-left:20px;}
+.history-sec{margin-bottom:28px;}
+.history-sec h4{font-family:'Black Han Sans',sans-serif;font-size:11px;letter-spacing:.26em;color:var(--g);margin-bottom:9px;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
+.history-sec h4::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0;background:var(--y);box-shadow:0 0 6px rgba(255,230,0,.7);}
+.history-sec p{font-size:13px;line-height:2.05;color:rgba(255,255,255,.6);letter-spacing:.04em;}
+.history-sec p strong{color:var(--y);font-weight:700;}
+
+/* 由来動画カード */
+.yurai-card{
+  display:flex;gap:14px;align-items:stretch;
+  background:var(--d2);border:1px solid rgba(255,230,0,.15);
+  padding:12px;margin-top:12px;
+  clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);
+  transition:all .22s;-webkit-tap-highlight-color:transparent;
+}
+.yurai-card:hover,.yurai-card:active{border-color:rgba(255,230,0,.45);background:rgba(255,230,0,.05);}
+.yurai-thumb{position:relative;width:160px;flex-shrink:0;aspect-ratio:16/9;overflow:hidden;background:#1a1a1a;}
+.yurai-thumb img{width:100%;height:100%;object-fit:cover;filter:brightness(.82);transition:filter .25s;}
+.yurai-card:hover .yurai-thumb img{filter:brightness(1);}
+.yurai-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.32);font-size:24px;color:var(--y);text-shadow:0 0 14px rgba(255,230,0,.8);transition:background .22s;}
+.yurai-card:hover .yurai-play{background:rgba(0,0,0,.52);}
+.yurai-info{display:flex;flex-direction:column;justify-content:center;gap:8px;}
+.yurai-badge{font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.22em;color:var(--y);border:1px solid rgba(255,230,0,.3);padding:2px 7px;display:inline-block;}
+.yurai-desc{font-size:12px;line-height:1.7;color:rgba(255,255,255,.5);letter-spacing:.04em;}
+.yurai-cta{font-family:'Black Han Sans',sans-serif;font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.45);transition:color .2s;}
+.yurai-card:hover .yurai-cta{color:var(--y);}
+
+
+
+
+/* ── LATEST VIDEO ── */
+.latest-section{max-width:1160px;margin:0 auto;padding:0 14px 56px;}
+.latest-inner{
+  background:var(--d1);border:1px solid rgba(255,230,0,.1);
+  padding:36px 36px 32px;
+  clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));
+}
+.latest-header{display:flex;align-items:center;gap:16px;margin-bottom:24px;}
+.latest-tag{
+  font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.35em;
+  color:var(--y);border:1px solid rgba(255,230,0,.3);padding:4px 12px;
+  text-transform:uppercase;flex-shrink:0;
+}
+.latest-title{
+  font-family:'Black Han Sans',sans-serif;font-size:clamp(18px,3vw,26px);
+  letter-spacing:.15em;color:var(--w);
+}
+.latest-embed-wrap{
+  position:relative;width:100%;padding-bottom:56.25%;
+  background:#000;border:1px solid rgba(255,255,255,.06);
+  overflow:hidden;
+}
+.latest-embed{
+  position:absolute;top:0;left:0;width:100%;height:100%;
+  border:none;
+}
+/* サムネイル方式 */
+.latest-thumb-link{display:block;-webkit-tap-highlight-color:transparent;}
+.latest-thumb-wrap{
+  position:relative;width:100%;aspect-ratio:16/9;
+  overflow:hidden;background:#111;
+  border:1px solid rgba(255,255,255,.06);
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);
+}
+.latest-thumb-img{
+  width:100%;height:100%;object-fit:cover;
+  filter:brightness(.82);
+  transition:filter .3s,transform .4s;
+  display:block;
+}
+.latest-thumb-link:hover .latest-thumb-img{filter:brightness(1);transform:scale(1.03);}
+.latest-thumb-overlay{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  background:rgba(0,0,0,.28);
+  transition:background .3s;
+}
+.latest-thumb-link:hover .latest-thumb-overlay{background:rgba(0,0,0,.48);}
+.latest-play-btn{
+  width:68px;height:68px;border-radius:50%;
+  background:rgba(255,230,0,.92);
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;color:#0a0a0a;
+  box-shadow:0 0 32px rgba(255,230,0,.5);
+  transition:transform .25s,box-shadow .25s;
+  margin-bottom:16px;
+}
+.latest-thumb-link:hover .latest-play-btn{
+  transform:scale(1.12);
+  box-shadow:0 0 48px rgba(255,230,0,.8);
+}
+.latest-thumb-title{
+  font-family:"Black Han Sans",sans-serif;
+  font-size:clamp(12px,2vw,17px);letter-spacing:.1em;
+  color:rgba(255,255,255,.88);
+  text-align:center;padding:0 20px;
+  text-shadow:0 2px 8px rgba(0,0,0,.8);
+  max-width:600px;
+}
+@media(max-width:600px){
+  .latest-play-btn{width:52px;height:52px;font-size:20px;margin-bottom:10px;}
+}
+.latest-link-wrap{margin-top:18px;text-align:right;}
+@media(max-width:600px){
+  .latest-section{padding:0 12px 40px;}
+  .latest-inner{padding:22px 16px 20px;}
+  .latest-link-wrap{text-align:center;}
+}
+
+
+
+/* ── TAB / NAV NEW BADGE ── */
+.tab-new-badge{
+  display:inline-block;margin-left:6px;
+  background:#FF2D2D;color:#fff;
+  font-family:'Oswald',sans-serif;font-size:8px;letter-spacing:.15em;
+  padding:1px 5px;border-radius:2px;
+  vertical-align:middle;line-height:1.6;
+  animation:badgePulse 1.8s ease-in-out infinite;
+}
+.nav-new-badge{
+  display:inline-block;margin-left:5px;
+  background:#FF2D2D;color:#fff;
+  font-family:'Oswald',sans-serif;font-size:7px;letter-spacing:.12em;
+  padding:1px 4px;border-radius:2px;
+  vertical-align:middle;line-height:1.6;
+  animation:badgePulse 1.8s ease-in-out infinite;
+}
+@keyframes badgePulse{
+  0%,100%{opacity:1;transform:scale(1);}
+  50%{opacity:.7;transform:scale(0.95);}
+}
+
+/* ── RADIO ── */
+.radio-intro{margin-bottom:20px;font-size:12px;color:rgba(255,255,255,.36);letter-spacing:.05em;line-height:1.8;}
+.radio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.radio-card{
+  display:block;background:var(--d1);border:1px solid rgba(255,255,255,.06);
+  overflow:hidden;position:relative;
+  clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);
+  transition:transform .25s,border-color .25s;
+  -webkit-tap-highlight-color:transparent;
+}
+.radio-card:hover{transform:translateY(-4px);border-color:rgba(255,230,0,.42);}
+.radio-thumb-wrap{position:relative;aspect-ratio:16/9;overflow:hidden;background:#111;}
+.radio-thumb{width:100%;height:100%;object-fit:cover;filter:brightness(.78);transition:filter .3s;}
+.radio-card:hover .radio-thumb{filter:brightness(1);}
+.radio-play{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.25);transition:background .25s;
+}
+.radio-play::before{content:'▶';font-size:28px;color:var(--y);text-shadow:0 0 16px rgba(255,230,0,.8);opacity:0;transition:opacity .25s;}
+.radio-card:hover .radio-play{background:rgba(0,0,0,.45);}
+.radio-card:hover .radio-play::before{opacity:1;}
+.radio-badge{
+  position:absolute;top:7px;left:7px;z-index:2;
+  background:var(--y);color:var(--bk);
+  font-family:'Black Han Sans',sans-serif;font-size:9px;letter-spacing:.18em;
+  padding:2px 7px;line-height:1.5;
+}
+.radio-info{padding:12px 12px 14px;}
+.radio-ep{font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.3em;color:rgba(255,230,0,.55);margin-bottom:4px;}
+.radio-title{font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;color:rgba(255,255,255,.82);line-height:1.5;letter-spacing:.03em;}
+
+/* ── MEIGEN ── */
+.meigen-intro{margin-bottom:24px;font-size:12px;color:rgba(255,255,255,.36);letter-spacing:.05em;line-height:1.8;}
+.meigen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.meigen-card{
+  background:var(--d1);border:1px solid rgba(255,255,255,.06);
+  padding:20px 18px 16px;position:relative;overflow:hidden;
+  clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));
+  transition:transform .28s,border-color .28s;
+}
+.meigen-card:hover{transform:translateY(-4px);}
+.meigen-card::before{
+  content:'"';position:absolute;top:-10px;right:10px;
+  font-size:80px;font-family:'Black Han Sans',sans-serif;
+  color:rgba(255,230,0,.06);line-height:1;pointer-events:none;
+}
+.meigen-member-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'Black Han Sans',sans-serif;font-size:9px;letter-spacing:.22em;
+  padding:2px 8px;margin-bottom:12px;border-width:1px;border-style:solid;
+}
+.meigen-text{
+  font-size:14px;font-weight:700;line-height:1.75;
+  color:rgba(255,255,255,.85);letter-spacing:.04em;
+  font-family:'Noto Sans JP',sans-serif;
+}
+
+/* メンバーカラー別 */
+.meigen-oyatsu{border-top:2px solid #444;border-color:rgba(255,255,255,.06);}
+.meigen-oyatsu .meigen-member-tag{color:#aaa;border-color:rgba(150,150,150,.3);background:rgba(100,100,100,.1);}
+.meigen-nojmon{border-top:2px solid #8B2FC9;border-color:rgba(139,47,201,.15);}
+.meigen-nojmon .meigen-member-tag{color:#b060e0;border-color:rgba(139,47,201,.4);background:rgba(139,47,201,.08);}
+.meigen-noyami{border-top:2px solid #1E90FF;border-color:rgba(30,144,255,.15);}
+.meigen-noyami .meigen-member-tag{color:#5aabff;border-color:rgba(30,144,255,.4);background:rgba(30,144,255,.08);}
+.meigen-toko{border-top:2px solid #5B4EE8;border-color:rgba(91,78,232,.15);}
+.meigen-toko .meigen-member-tag{color:#8b80f0;border-color:rgba(91,78,232,.4);background:rgba(91,78,232,.08);}
+.meigen-chiwa{border-top:2px solid #aaa;border-color:rgba(200,200,200,.12);}
+.meigen-chiwa .meigen-member-tag{color:#ccc;border-color:rgba(200,200,200,.3);background:rgba(200,200,200,.06);}
+
+
+
+/* ── MEMBERS内 名言集 ── */
+.members-meigen-wrap{margin-top:52px;}
+.members-meigen-header{
+  display:flex;align-items:center;gap:16px;margin-bottom:10px;
+}
+.members-meigen-line{flex:1;height:1px;background:rgba(255,230,0,.2);}
+.members-meigen-title{
+  font-family:'Black Han Sans',sans-serif;font-size:14px;
+  letter-spacing:.35em;color:var(--y);opacity:.85;flex-shrink:0;
+}
+.members-meigen-sub{
+  font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.18em;
+  text-align:center;margin-bottom:24px;font-family:'Oswald',sans-serif;
+}
+
+/* ── KOKOBOKU内 QUOTES ── */
+.kokoboku-meigen-wrap{margin-top:48px;}
+.kokoboku-meigen-header{
+  display:flex;align-items:center;gap:16px;margin-bottom:10px;
+}
+.kokoboku-meigen-line{flex:1;height:1px;background:rgba(255,230,0,.2);}
+.kokoboku-meigen-title{
+  font-family:'Black Han Sans',sans-serif;font-size:13px;
+  letter-spacing:.4em;color:var(--y);opacity:.8;flex-shrink:0;
+}
+.kokoboku-meigen-sub{
+  font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.18em;
+  text-align:center;margin-bottom:24px;font-family:'Oswald',sans-serif;
+}
+@media(max-width:600px){
+  .meigen-grid{grid-template-columns:1fr;}
+  .kokoboku-meigen-wrap{margin-top:36px;}
+}
+
+/* ── FANART ── */
+.fanart-wrap{max-width:680px;}
+.fanart-header{margin-bottom:28px;}
+.fanart-header p{font-size:13px;color:rgba(255,255,255,.55);line-height:2;letter-spacing:.04em;}
+.fanart-hashtag{
+  display:inline-block;margin-top:10px;
+  font-family:'Black Han Sans',sans-serif;font-size:clamp(22px,4vw,34px);
+  letter-spacing:.1em;color:var(--y);
+  text-shadow:0 0 24px rgba(255,230,0,.35);
+}
+.fanart-steps{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+  margin:28px 0;
+}
+.fanart-step{
+  background:var(--d1);border:1px solid rgba(255,230,0,.08);
+  padding:20px 16px;text-align:center;
+  clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);
+}
+.fanart-step-num{
+  font-family:'Oswald',sans-serif;font-size:28px;letter-spacing:.1em;
+  color:rgba(255,230,0,.25);line-height:1;margin-bottom:8px;
+}
+.fanart-step-title{font-family:'Black Han Sans',sans-serif;font-size:12px;letter-spacing:.2em;color:var(--y);margin-bottom:6px;}
+.fanart-step-text{font-size:11px;color:rgba(255,255,255,.45);line-height:1.7;letter-spacing:.03em;}
+.fanart-btn-wrap{margin-top:8px;}
+.btn-fanart{
+  display:inline-flex;align-items:center;gap:10px;
+  background:transparent;color:var(--w);
+  font-family:'Black Han Sans',sans-serif;font-size:15px;letter-spacing:.14em;
+  padding:13px 28px;border:1px solid rgba(255,255,255,.2);
+  clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);
+  transition:all .22s;-webkit-tap-highlight-color:transparent;
+}
+.btn-fanart:hover{border-color:var(--y);color:var(--y);}
+.fanart-note{margin-top:14px;font-size:11px;color:rgba(255,255,255,.28);letter-spacing:.06em;}
+
+@media(max-width:900px){
+  .radio-grid{grid-template-columns:repeat(2,1fr);}
+  .meigen-grid{grid-template-columns:repeat(2,1fr);}
+  .fanart-steps{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:600px){
+  .radio-grid{grid-template-columns:repeat(2,1fr);gap:8px;}
+  .meigen-grid{grid-template-columns:1fr;gap:10px;}
+  .fanart-steps{grid-template-columns:1fr;gap:8px;}
+  .fanart-hashtag{font-size:22px;}
+}
+
+/* ── GOODS ── */
+.goods-wrap{display:flex;align-items:center;justify-content:center;min-height:420px;padding:20px 0;}
+.goods-coming{
+  text-align:center;max-width:520px;padding:52px 32px;
+  background:linear-gradient(135deg,rgba(255,230,0,.05),rgba(255,255,255,.02));
+  border:1px solid rgba(255,230,0,.14);
+  clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px);
+  position:relative;overflow:hidden;
+}
+.goods-coming::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 30%,rgba(255,230,0,.04),transparent 65%);
+}
+.goods-icon{font-size:52px;margin-bottom:16px;position:relative;z-index:1;animation:goodsFloat 3s ease-in-out infinite;}
+@keyframes goodsFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+.goods-tag{
+  display:inline-block;font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.38em;
+  color:var(--y);border:1px solid rgba(255,230,0,.3);padding:3px 14px;margin-bottom:16px;
+  position:relative;z-index:1;
+}
+.goods-title{
+  font-family:'Black Han Sans',sans-serif;
+  font-size:clamp(32px,7vw,56px);letter-spacing:.15em;line-height:1.1;
+  color:var(--w);margin-bottom:18px;position:relative;z-index:1;
+}
+.goods-title span{
+  display:block;color:var(--y);
+  text-shadow:0 0 30px rgba(255,230,0,.4);
+}
+.goods-desc{
+  font-size:13px;color:rgba(255,255,255,.48);line-height:2;
+  letter-spacing:.05em;margin-bottom:28px;position:relative;z-index:1;
+}
+.goods-sns{position:relative;z-index:1;margin-bottom:32px;}
+.goods-dots{display:flex;gap:8px;justify-content:center;position:relative;z-index:1;}
+.goods-dots span{
+  width:8px;height:8px;border-radius:50%;background:rgba(255,230,0,.3);
+  animation:dotPulse 1.4s ease-in-out infinite;
+}
+.goods-dots span:nth-child(2){animation-delay:.2s;}
+.goods-dots span:nth-child(3){animation-delay:.4s;}
+@keyframes dotPulse{0%,100%{opacity:.3;transform:scale(1);}50%{opacity:1;transform:scale(1.3);background:var(--y);}}
+@media(max-width:600px){
+  .goods-coming{padding:36px 20px;}
+  .goods-icon{font-size:40px;}
+}
+
+
+
+
+/* ── FAN POST SECTION ── */
+.fanpost-section{
+  max-width:1160px;margin:0 auto 0;padding:0 14px 56px;
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  align-items:stretch;
+}
+.fanpost-left{
+  background:linear-gradient(135deg,rgba(255,230,0,.07),rgba(255,230,0,.02));
+  border:1px solid rgba(255,230,0,.16);
+  border-right:none;
+  padding:44px 40px;
+  clip-path:polygon(0 0,100% 0,100% 100%,14px 100%,0 calc(100% - 14px));
+  display:flex;flex-direction:column;justify-content:center;gap:20px;
+}
+.fanpost-label{
+  font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.42em;
+  color:rgba(255,230,0,.55);text-transform:uppercase;
+}
+.fanpost-title{
+  font-family:'Black Han Sans',sans-serif;
+  font-size:clamp(20px,3.2vw,30px);letter-spacing:.1em;line-height:1.5;
+  color:var(--w);
+}
+.fanpost-desc{
+  font-size:13px;color:rgba(255,255,255,.52);line-height:2;
+  letter-spacing:.04em;
+}
+.fanpost-desc strong{color:var(--y);}
+.btn-fanpost{
+  display:inline-flex;align-items:center;gap:8px;
+  align-self:flex-start;
+  background:transparent;color:var(--w);
+  font-family:'Black Han Sans',sans-serif;font-size:13px;letter-spacing:.12em;
+  padding:11px 22px;border:1px solid rgba(255,255,255,.2);
+  clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);
+  transition:all .22s;-webkit-tap-highlight-color:transparent;
+}
+.btn-fanpost:hover{border-color:var(--y);color:var(--y);}
+
+.fanpost-right{
+  background:var(--d1);
+  border:1px solid rgba(255,230,0,.16);
+  padding:44px 40px;
+  display:flex;align-items:center;
+}
+.fanpost-tag-cloud{width:100%;display:flex;flex-direction:column;gap:0;}
+.fanpost-step{display:flex;align-items:flex-start;gap:16px;padding:14px 0;}
+.fanpost-step-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+.fanpost-step-title{
+  font-family:'Black Han Sans',sans-serif;font-size:11px;
+  letter-spacing:.2em;color:var(--y);margin-bottom:5px;
+}
+.fanpost-step-text{font-size:12px;color:rgba(255,255,255,.48);line-height:1.7;letter-spacing:.03em;}
+.fanpost-divider{height:1px;background:rgba(255,255,255,.06);margin:0;}
+.fanpost-hashtag{
+  margin-top:20px;
+  font-family:'Black Han Sans',sans-serif;
+  font-size:clamp(24px,4vw,38px);letter-spacing:.1em;
+  color:var(--y);text-align:center;
+  text-shadow:0 0 28px rgba(255,230,0,.3);
+}
+
+@media(max-width:900px){
+  .fanpost-section{grid-template-columns:1fr;}
+  .fanpost-left{border-right:1px solid rgba(255,230,0,.16);border-bottom:none;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%);}
+  .fanpost-right{clip-path:polygon(0 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%);}
+}
+@media(max-width:600px){
+  .fanpost-section{padding:0 12px 40px;}
+  .fanpost-left,.fanpost-right{padding:28px 20px;}
+  .fanpost-title{font-size:20px;}
+  .fanpost-hashtag{font-size:22px;}
+}
+
+
+/* ── スマホ固定ボタン ── */
+.fixed-yt-btn{
+  display:none;
+  position:fixed;bottom:20px;right:16px;z-index:700;
+  background:var(--y);color:var(--bk);
+  font-family:'Black Han Sans',sans-serif;font-size:13px;letter-spacing:.1em;
+  padding:12px 18px;
+  clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);
+  box-shadow:0 4px 16px rgba(255,230,0,.4);
+  text-decoration:none;
+  min-height:44px;display:none;align-items:center;gap:6px;
+  transition:transform .2s,box-shadow .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.fixed-yt-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,230,0,.5);}
+@media(max-width:600px){
+  .fixed-yt-btn{display:inline-flex;}
+}
+
+/* ── OBENRI SECTION ── */
+.obenri-section{max-width:1160px;margin:0 auto;padding:0 14px 80px;}
+.obenri-inner{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,rgba(57,255,20,.06),rgba(255,230,0,.04));
+  border:1px solid rgba(57,255,20,.2);
+  clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px);
+  padding:52px 40px 48px;
+}
+.obenri-inner::before{
+  content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+  background:radial-gradient(circle at 30% 40%,rgba(57,255,20,.04),transparent 55%);
+  animation:ctaBg 25s linear infinite;pointer-events:none;
+}
+.obenri-header{position:relative;z-index:1;display:flex;align-items:flex-start;gap:24px;margin-bottom:36px;flex-wrap:wrap;}
+.obenri-icon{
+  font-size:48px;flex-shrink:0;
+  filter:drop-shadow(0 0 12px rgba(57,255,20,.5));
+  animation:radioPulse 2.5s ease-in-out infinite;
+}
+@keyframes radioPulse{0%,100%{filter:drop-shadow(0 0 12px rgba(57,255,20,.5));}50%{filter:drop-shadow(0 0 24px rgba(57,255,20,.9));}}
+.obenri-header-text{}
+.obenri-tag{
+  display:inline-block;font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.38em;
+  color:var(--g);border:1px solid rgba(57,255,20,.35);padding:3px 12px;margin-bottom:10px;text-transform:uppercase;
+}
+.obenri-title{
+  font-family:'Black Han Sans',sans-serif;
+  font-size:clamp(22px,4vw,36px);letter-spacing:.12em;line-height:1.2;
+  color:var(--w);margin-bottom:8px;
+}
+.obenri-title span{color:var(--g);}
+.obenri-desc{font-size:14px;color:rgba(255,255,255,.55);line-height:1.9;letter-spacing:.04em;}
+
+.obenri-rules{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+  margin-bottom:36px;
+}
+.obenri-rule{
+  background:rgba(0,0,0,.35);border:1px solid rgba(57,255,20,.12);
+  padding:18px 16px;
+  clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);
+}
+.obenri-rule-icon{font-size:20px;margin-bottom:8px;}
+.obenri-rule-title{font-family:'Black Han Sans',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--g);margin-bottom:5px;}
+.obenri-rule-text{font-size:11px;color:rgba(255,255,255,.45);line-height:1.7;letter-spacing:.03em;}
+
+.obenri-btn-wrap{position:relative;z-index:1;text-align:center;}
+.btn-obenri{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--g);color:var(--bk);
+  font-family:'Black Han Sans',sans-serif;font-size:16px;letter-spacing:.14em;
+  padding:16px 40px;
+  clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);
+  position:relative;overflow:hidden;
+  transition:transform .2s,box-shadow .2s;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;
+}
+.btn-obenri::before{content:'';position:absolute;inset:0;background:var(--y);transform:translateX(-100%);transition:transform .3s;}
+.btn-obenri:hover::before{transform:translateX(0);}
+.btn-obenri:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(57,255,20,.35);}
+.btn-obenri span{position:relative;z-index:1;}
+.obenri-note{margin-top:14px;font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.08em;}
+
+@media(max-width:600px){
+  .obenri-section{padding:0 12px 60px;}
+  .obenri-inner{padding:32px 18px 36px;}
+  .obenri-header{gap:14px;margin-bottom:24px;}
+  .obenri-icon{font-size:36px;}
+  .obenri-title{font-size:22px;letter-spacing:.08em;}
+  .obenri-desc{font-size:13px;}
+  .obenri-rules{grid-template-columns:1fr;gap:8px;margin-bottom:28px;}
+  .btn-obenri{font-size:14px;padding:13px 28px;}
+}
+
+.cta-section{padding:0 14px 64px;max-width:1160px;margin:0 auto;}
+.cta-inner{background:linear-gradient(135deg,rgba(255,230,0,.07),rgba(57,255,20,.03));border:1px solid rgba(255,230,0,.17);padding:44px 28px;text-align:center;position:relative;overflow:hidden;clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px);}
+.cta-inner::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,230,0,.04),transparent 60%);animation:ctaBg 20s linear infinite;pointer-events:none;}
+@keyframes ctaBg{from{transform:rotate(0);}to{transform:rotate(360deg);}}
+.cta-inner h2{position:relative;z-index:1;font-family:'Black Han Sans',sans-serif;font-size:clamp(15px,3.2vw,24px);letter-spacing:.16em;margin-bottom:10px;}
+.cta-inner p{position:relative;z-index:1;font-size:13px;color:var(--txt-muted);line-height:1.85;max-width:400px;margin:0 auto 22px;}
+.cta-inner .btn-primary{position:relative;z-index:1;font-size:14px;padding:12px 28px;}
+footer{border-top:1px solid rgba(255,255,255,.05);padding:28px 14px;text-align:center;}
+.footer-logo{font-family:'Black Han Sans',sans-serif;font-size:10px;letter-spacing:.28em;color:rgba(255,255,255,.15);margin-bottom:8px;line-height:1.6;}
+.footer-links{display:flex;gap:16px;justify-content:center;margin-bottom:10px;flex-wrap:wrap;}
+.footer-links a{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.18em;color:rgba(255,230,0,.36);text-transform:uppercase;transition:color .18s;}
+.footer-links a:hover{color:var(--y);}
+footer small{font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.1em;}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .72s cubic-bezier(.16,1,.3,1),transform .72s cubic-bezier(.16,1,.3,1);}
+.reveal.in{opacity:1;transform:translateY(0);}
+.delay-1{transition-delay:.07s;}.delay-2{transition-delay:.14s;}.delay-3{transition-delay:.21s;}.delay-4{transition-delay:.28s;}.delay-5{transition-delay:.35s;}
+
+@media(max-width:900px){
+  .members-grid{grid-template-columns:repeat(3,1fr);}
+  .shorts-grid{grid-template-columns:repeat(3,1fr);}
+  .games-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+  :root{--nav-h:52px;}
+  .nav{padding:0 14px;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .hero{padding:calc(var(--nav-h) + 18px) 14px 46px;}
+  .hero-tag{font-size:8px;letter-spacing:.22em;}
+  .hero-copy{font-size:12px;line-height:1.8;}
+  .hero-title-full{font-size:10px;letter-spacing:.06em;}
+  .hero-schedule{font-size:10px;padding:7px 12px;letter-spacing:.05em;gap:6px;}
+  .btn-primary,.btn-outline{font-size:12px;padding:10px 16px;}
+  .tabs-section{padding:16px 12px 60px;}
+  .tabs-nav{margin-bottom:24px;margin-left:-12px;margin-right:-12px;padding:0 12px;}
+  .tab-btn{padding:10px 13px;font-size:11px;letter-spacing:.1em;}
+  .tab-btn .en{display:none;}
+  .members-grid{grid-template-columns:repeat(2,1fr);gap:9px;}
+  .member-card{padding:18px 9px 13px;}
+  .m-icon{width:60px;height:60px;}
+  .m-name{font-size:16px;}
+  .m-hint{display:none;}
+  .shorts-grid{grid-template-columns:repeat(2,1fr);gap:6px;}
+  .games-grid{grid-template-columns:repeat(2,1fr);gap:6px;}
+  .modal-box{clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));}
+  .modal-header{padding:16px 16px 12px;gap:11px;}
+  .modal-icon{width:56px;height:56px;}
+  .modal-name{font-size:22px;}
+  .modal-body{padding:14px 16px 18px;}
+  .modal-grid2{grid-template-columns:1fr;gap:0;}
+  .modal-pickup-thumb{width:100px;}
+  .yurai-thumb{width:110px;}
+  .history-lead{font-size:14px;letter-spacing:.07em;}
+  .history-subtitle{font-size:10px;}
+  .history-body{padding-left:14px;}
+  .history-sec p{font-size:12px;line-height:1.95;}
+  .cta-section{padding:0 12px 52px;}
+  .cta-inner{padding:28px 16px;}
+  .cta-inner h2{letter-spacing:.09em;}
+  .footer-logo{letter-spacing:.14em;font-size:9px;}
+}
+
+/* prefers-reduced-motion 対応 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .ticker { animation: none; }
+  .logo-wrap img { animation: none; }
+}
+
+
+/* hidden属性でもactiveなら表示 */
+.tab-panel.active[hidden]{display:block;}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">ここボク / BGM NOISY</div>
+  <ul class="nav-links">
+    <li><a href="#tabs" data-target="members">MEMBERS</a></li>
+    <li><a href="#tabs" data-target="kokoboku">KOKOBOKU</a></li>
+    <li><a href="#tabs" data-target="shorts">SHORT <span class="nav-new-badge">NEW</span></a></li>
+    <li><a href="#tabs" data-target="radio">RADIO<span class="nav-new-badge">NEW</span></a></li>
+    <li><a href="#tabs" data-target="games">GAMES</a></li>
+    <li><a href="#tabs" data-target="members" data-scroll="members-meigen">QUOTES</a></li>
+    <li><a href="#tabs" data-target="goods">GOODS</a></li>
+    <li><a href="#obenri" class="nav-obenri">📻 お便り</a></li>
+    <li><a href="https://www.youtube.com/@KOKOBOKUBGM" target="_blank" rel="noopener" class="nav-yt">▶ YouTube</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="drawer" aria-hidden="true">
+  <a href="#tabs" data-target="kokoboku" class="drawer-link">KOKOBOKU</a>
+  <a href="#tabs" data-target="members" class="drawer-link">MEMBERS</a>
+  <a href="#tabs" data-target="games"   class="drawer-link">GAMES</a>
+  <a href="#tabs" data-target="shorts"  class="drawer-link">SHORT <span class="nav-new-badge">NEW</span></a>
+  <a href="#tabs" data-target="radio"   class="drawer-link">RADIO <span class="nav-new-badge">NEW</span></a>
+  <a href="#tabs" data-target="members" data-scroll="members-meigen" class="drawer-link">QUOTES</a>
+  <a href="#tabs" data-target="goods"   class="drawer-link">GOODS</a>
+  <a href="#obenri" class="drawer-link drawer-obenri">📻 ここラジ お便り</a>
+  <a href="https://www.youtube.com/@KOKOBOKUBGM" target="_blank" rel="noopener" class="drawer-yt">▶ YouTubeチャンネル</a>
+  <a href="https://x.com/kokoboku_1009" target="_blank" rel="noopener">𝕏 X (Twitter)</a>
+</div>
+
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-grid"></div><div class="glitch-bar"></div>
+  <div class="logo-wrap">
+    <img src="images/logo.webp" alt="ここからはじまるボクらの世界" width="380" height="380">
+  </div>
+  <div class="hero-sub">
+    <div class="hero-tag">GAME LIVE STREAMING GROUP — 5 MEMBERS</div>
+    <p class="hero-copy">男5人が笑って、叫んで、本気になる。<br>ここが、ボクたちの世界のはじまり。</p>
+    <span class="hero-title-full">〜BGMうるさいすねぇ〜</span>
+    <div class="hero-schedule"><div class="live-dot"></div>毎週 どこかの曜日 22:00〜 LIVE配信！</div>
+    <div class="next-live">
+      <div class="next-live-dot"></div>
+      <div class="next-live-label">NEXT LIVE</div>
+      <div class="next-live-date"><span class="date-highlight" id="next-live-date">次回配信はXでお知らせ</span><span id="next-live-time"></span></div>
+    </div>
+  </div>
+  <div class="hero-cta">
+    <a href="https://www.youtube.com/watch?v=AemKzdiPNkI" target="_blank" rel="noopener" class="btn-primary"><span>▶ 最新動画を見る</span></a>
+    <a href="https://www.youtube.com/@KOKOBOKUBGM" target="_blank" rel="noopener" class="btn-outline btn-sub"><span>チャンネル登録</span></a>
+    <a href="https://x.com/kokoboku_1009" target="_blank" rel="noopener" class="btn-outline"><span>𝕏 フォロー</span></a>
+  </div>
+  <div class="scroll-hint"><span>SCROLL</span><div class="scroll-arrow"></div></div>
+</section>
+
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker">
+    <span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span class="ticker-schedule">次回配信はXでお知らせ</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span><span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span class="ticker-schedule">次回配信はXでお知らせ</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span>
+  </div>
+</div>
+
+
+<!-- ============================================================
+   LATEST VIDEO SECTION
+   ▼ 最新動画のYouTube動画IDを変更したい場合: VIDEO_ID を書き換える
+   ============================================================ -->
+<div class="latest-section">
+  <div class="latest-inner reveal">
+    <div class="latest-header">
+      <div class="latest-tag">▶ LATEST VIDEO</div>
+      <div class="latest-title">最新動画・配信</div>
+    </div>
+    <!-- ▼ 最新動画を更新する場合: VIDEO_ID と TITLE を書き換える -->
+    <a href="https://www.youtube.com/watch?v=AemKzdiPNkI"
+       target="_blank" rel="noopener"
+       class="latest-thumb-link">
+      <div class="latest-thumb-wrap">
+        <img
+          src="https://i.ytimg.com/vi/AemKzdiPNkI/maxresdefault.jpg"
+          alt="【ここボク】LIVE配信"
+          class="latest-thumb-img"
+          loading="lazy"
+          onerror="this.src='https://i.ytimg.com/vi/AemKzdiPNkI/hqdefault.jpg'">
+        <div class="latest-thumb-overlay">
+          <div class="latest-play-btn">▶</div>
+          <div class="latest-thumb-title" id="latest-title">読み込み中...</div>
+        </div>
+      </div>
+    </a>
+    <div class="latest-link-wrap">
+      <a href="https://www.youtube.com/@KOKOBOKUBGM" target="_blank" rel="noopener" class="btn-outline">
+        <span>▶ チャンネルで全動画を見る</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<section id="tabs" class="tabs-section">
+  <div class="tabs-nav reveal" role="tablist" aria-label="コンテンツタブ">
+    <button class="tab-btn active" role="tab" aria-selected="true" id="tab-btn-kokoboku" aria-controls="tab-kokoboku" data-tab="kokoboku"><span class="en">01</span>KOKOBOKU</button>
+    <button class="tab-btn" role="tab" aria-selected="false" id="tab-btn-members" aria-controls="tab-members" data-tab="members"><span class="en">02</span>MEMBERS</button>
+    <button class="tab-btn" role="tab" aria-selected="false" id="tab-btn-games" aria-controls="tab-games" data-tab="games"><span class="en">03</span>GAMES</button>
+    <button class="tab-btn" role="tab" aria-selected="false" id="tab-btn-shorts" aria-controls="tab-shorts" data-tab="shorts"><span class="en">04</span>SHORT<span class="tab-new-badge">NEW</span></button>
+    <button class="tab-btn" role="tab" aria-selected="false" id="tab-btn-radio" aria-controls="tab-radio" data-tab="radio"><span class="en">05</span>RADIO<span class="tab-new-badge">NEW</span></button>
+    <button class="tab-btn" role="tab" aria-selected="false" id="tab-btn-goods" aria-controls="tab-goods" data-tab="goods"><span class="en">06</span>GOODS</button>
+  </div>
+
+  <div class="tab-panel" role="tabpanel" id="tab-members" aria-labelledby="tab-btn-members" hidden>
+    <div class="members-grid">      <div class="member-card reveal delay-1" data-modal="oyatsu" role="button" tabindex="0" aria-label="をやつのプロフィールを見る" style="--mc:#444444;border-top:2px solid #444444;">
+        <img class="m-icon" src="images/member-oyatsu.webp" alt="をやつ" width="200" height="200" loading="lazy">
+        <div class="m-num">NO.01</div>
+        <div class="m-name">をやつ</div>
+        <div class="m-tag">テキトー</div>
+        <div class="m-hint">タップで詳細 →</div>
+      </div>
+      <div class="member-card reveal delay-2" data-modal="nojmon" role="button" tabindex="0" aria-label="のじもんのプロフィールを見る" style="--mc:#8B2FC9;border-top:2px solid #8B2FC9;">
+        <img class="m-icon" src="images/member-nojmon.webp" alt="のじもん" width="200" height="200" loading="lazy">
+        <div class="m-num">NO.02</div>
+        <div class="m-name">のじもん</div>
+        <div class="m-tag">ゲラ</div>
+        <div class="m-hint">タップで詳細 →</div>
+      </div>
+      <div class="member-card reveal delay-3" data-modal="noyami" role="button" tabindex="0" aria-label="のやみぃのプロフィールを見る" style="--mc:#1E90FF;border-top:2px solid #1E90FF;">
+        <img class="m-icon" src="images/member-noyami.webp" alt="のやみぃ" width="200" height="200" loading="lazy">
+        <div class="m-num">NO.03</div>
+        <div class="m-name">のやみぃ</div>
+        <div class="m-tag">謎</div>
+        <div class="m-hint">タップで詳細 →</div>
+      </div>
+      <div class="member-card reveal delay-4" data-modal="toko" role="button" tabindex="0" aria-label="とこのプロフィールを見る" style="--mc:#5B4EE8;border-top:2px solid #5B4EE8;">
+        <img class="m-icon" src="images/member-toko.webp" alt="とこ" width="200" height="200" loading="lazy">
+        <div class="m-num">NO.04</div>
+        <div class="m-name">とこ</div>
+        <div class="m-tag">ガキ</div>
+        <div class="m-hint">タップで詳細 →</div>
+      </div>
+      <div class="member-card reveal delay-5" data-modal="chiwa" role="button" tabindex="0" aria-label="ちワのプロフィールを見る" style="--mc:#DDDDDD;border-top:2px solid #DDDDDD;">
+        <img class="m-icon" src="images/member-chiwa.webp" alt="ちワ" width="200" height="200" loading="lazy">
+        <div class="m-num">NO.05</div>
+        <div class="m-name">ちワ</div>
+        <div class="m-tag">不憫</div>
+        <div class="m-hint">タップで詳細 →</div>
+      </div></div>
+    <!-- 名言集 -->
+    <div class="members-meigen-wrap reveal" id="members-meigen">
+      <div class="members-meigen-header">
+        <div class="members-meigen-line"></div>
+        <div class="members-meigen-title">名言集</div>
+        <div class="members-meigen-line"></div>
+      </div>
+      <p class="members-meigen-sub">ここボクメンバーの名言・迷言集</p>
+      <div class="meigen-grid">
+      <div class="meigen-card meigen-oyatsu">
+        <div class="meigen-member-tag">をやつ</div>
+        <div class="meigen-text">「しりとらないする？」</div>
+      </div>
+      <div class="meigen-card meigen-nojmon">
+        <div class="meigen-member-tag">のじもん</div>
+        <div class="meigen-text">「ビビって声も出ねぇか…シュッシュッ」</div>
+      </div>
+      <div class="meigen-card meigen-noyami">
+        <div class="meigen-member-tag">のやみぃ</div>
+        <div class="meigen-text">「チョットマッテーココドコデスカ」</div>
+      </div>
+      <div class="meigen-card meigen-toko">
+        <div class="meigen-member-tag">とこ</div>
+        <div class="meigen-text">「なんすか？やんすか？」</div>
+      </div>
+      <div class="meigen-card meigen-chiwa">
+        <div class="meigen-member-tag">ちワ</div>
+        <div class="meigen-text">「もう大丈夫って思ったらﾓｳｯ」</div>
+      </div>
+      <div class="meigen-card meigen-oyatsu">
+        <div class="meigen-member-tag">をやつ</div>
+        <div class="meigen-text">「これ誰？最後まで切ってって言ったよね」</div>
+      </div>
+      <div class="meigen-card meigen-nojmon">
+        <div class="meigen-member-tag">のじもん</div>
+        <div class="meigen-text">「この村はボクが守ります」</div>
+      </div>
+      <div class="meigen-card meigen-noyami">
+        <div class="meigen-member-tag">のやみぃ</div>
+        <div class="meigen-text">「あちぢ～や」</div>
+      </div>
+      <div class="meigen-card meigen-toko">
+        <div class="meigen-member-tag">とこ</div>
+        <div class="meigen-text">「すいませんミュートしてました」</div>
+      </div>
+      <div class="meigen-card meigen-chiwa">
+        <div class="meigen-member-tag">ちワ</div>
+        <div class="meigen-text">「やってくれたね」</div>
+      </div>
+      <div class="meigen-card meigen-oyatsu">
+        <div class="meigen-member-tag">をやつ</div>
+        <div class="meigen-text">「切り株警察だからおれ」</div>
+      </div>
+      <div class="meigen-card meigen-nojmon">
+        <div class="meigen-member-tag">のじもん</div>
+        <div class="meigen-text">「煙管人間です」</div>
+      </div>
+      <div class="meigen-card meigen-noyami">
+        <div class="meigen-member-tag">のやみぃ</div>
+        <div class="meigen-text">「アリエ～」</div>
+      </div>
+      <div class="meigen-card meigen-toko">
+        <div class="meigen-member-tag">とこ</div>
+        <div class="meigen-text">「初めて行くなぁ裁判所」</div>
+      </div>
+      <div class="meigen-card meigen-chiwa">
+        <div class="meigen-member-tag">ちワ</div>
+        <div class="meigen-text">「ざーけんな」</div>
+      </div>
+      <div class="meigen-card meigen-oyatsu">
+        <div class="meigen-member-tag">をやつ</div>
+        <div class="meigen-text">「親指動かせ～い」</div>
+      </div>
+      <div class="meigen-card meigen-nojmon">
+        <div class="meigen-member-tag">のじもん</div>
+        <div class="meigen-text">「おれは汽車だ」</div>
+      </div>
+      <div class="meigen-card meigen-noyami">
+        <div class="meigen-member-tag">のやみぃ</div>
+        <div class="meigen-text">「ポポチュウ」</div>
+      </div>
+      <div class="meigen-card meigen-toko">
+        <div class="meigen-member-tag">とこ</div>
+        <div class="meigen-text">「でもお父さん、お父さんじゃない」</div>
+      </div>
+      <div class="meigen-card meigen-chiwa">
+        <div class="meigen-member-tag">ちワ</div>
+        <div class="meigen-text">「やめてくださいその思想のやつ」</div>
+      </div>
+      <div class="meigen-card meigen-oyatsu">
+        <div class="meigen-member-tag">をやつ</div>
+        <div class="meigen-text">「ここおれん家だし」</div>
+      </div>
+      <div class="meigen-card meigen-nojmon">
+        <div class="meigen-member-tag">のじもん</div>
+        <div class="meigen-text">「チョリックチャイマン」</div>
+      </div>
+      <div class="meigen-card meigen-noyami">
+        <div class="meigen-member-tag">のやみぃ</div>
+        <div class="meigen-text">「あ、そうなんすよ。」</div>
+      </div>
+      <div class="meigen-card meigen-toko">
+        <div class="meigen-member-tag">とこ</div>
+        <div class="meigen-text">「でも村見つけたのおれっすよ」</div>
+      </div>
+      <div class="meigen-card meigen-chiwa">
+        <div class="meigen-member-tag">ちワ</div>
+        <div class="meigen-text">「普通におれが作るわもう」</div>
+      </div>
+      <div class="meigen-card meigen-oyatsu">
+        <div class="meigen-member-tag">をやつ</div>
+        <div class="meigen-text">「犬だからさ」</div>
+      </div>
+      <div class="meigen-card meigen-nojmon">
+        <div class="meigen-member-tag">のじもん</div>
+        <div class="meigen-text">「なになになに分かんない分かんない分かんない」</div>
+      </div>
+      <div class="meigen-card meigen-noyami">
+        <div class="meigen-member-tag">のやみぃ</div>
+        <div class="meigen-text">「マイナス６㏈なんで大丈夫です」</div>
+      </div>
+      <div class="meigen-card meigen-toko">
+        <div class="meigen-member-tag">とこ</div>
+        <div class="meigen-text">「じゃ、いただきます」</div>
+      </div>
+      <div class="meigen-card meigen-chiwa">
+        <div class="meigen-member-tag">ちワ</div>
+        <div class="meigen-text">「いいよ、いい、いい。」</div>
+      </div>
+      <div class="meigen-card meigen-oyatsu">
+        <div class="meigen-member-tag">をやつ</div>
+        <div class="meigen-text">「安全運転でいかさせていただきやす」</div>
+      </div>
+      <div class="meigen-card meigen-nojmon">
+        <div class="meigen-member-tag">のじもん</div>
+        <div class="meigen-text">「テレテレテレテレテレテレ（ルージュラ）」</div>
+      </div>
+      <div class="meigen-card meigen-noyami">
+        <div class="meigen-member-tag">のやみぃ</div>
+        <div class="meigen-text">「お前・・・」</div>
+      </div>
+      <div class="meigen-card meigen-toko">
+        <div class="meigen-member-tag">とこ</div>
+        <div class="meigen-text">「そなんしてたらみんな死ぬっすよ」</div>
+      </div>
+      <div class="meigen-card meigen-chiwa">
+        <div class="meigen-member-tag">ちワ</div>
+        <div class="meigen-text">「きのこ・・・きのこだけ」</div>
+      </div>
+      <div class="meigen-card meigen-oyatsu">
+        <div class="meigen-member-tag">をやつ</div>
+        <div class="meigen-text">「この先急カーブなのでシートベルトをしてください」</div>
+      </div>
+      <div class="meigen-card meigen-nojmon">
+        <div class="meigen-member-tag">のじもん</div>
+        <div class="meigen-text">「１１月８日と１月１８日ってどっちがいい歯の日か分かります？」</div>
+      </div>
+      <div class="meigen-card meigen-noyami">
+        <div class="meigen-member-tag">のやみぃ</div>
+        <div class="meigen-text">「あの、前向いてください？」</div>
+      </div>
+      <div class="meigen-card meigen-chiwa">
+        <div class="meigen-member-tag">ちワ</div>
+        <div class="meigen-text">「イキってるね今日」</div>
+      </div>
+      <div class="meigen-card meigen-oyatsu">
+        <div class="meigen-member-tag">をやつ</div>
+        <div class="meigen-text">「骨が、３個、３体、寝ます」</div>
+      </div>
+      <div class="meigen-card meigen-noyami">
+        <div class="meigen-member-tag">のやみぃ</div>
+        <div class="meigen-text">「ユダ裏切者じゃないからおれの中では」</div>
+      </div>
+      <div class="meigen-card meigen-chiwa">
+        <div class="meigen-member-tag">ちワ</div>
+        <div class="meigen-text">「なんか、イヤだね！」</div>
+      </div>
+      <div class="meigen-card meigen-oyatsu">
+        <div class="meigen-member-tag">をやつ</div>
+        <div class="meigen-text">「今日は、誕生日な人いますか？」</div>
+      </div>
+      <div class="meigen-card meigen-noyami">
+        <div class="meigen-member-tag">のやみぃ</div>
+        <div class="meigen-text">「シャドー世界チャンピョン」</div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-panel" role="tabpanel" id="tab-shorts" aria-labelledby="tab-btn-shorts" hidden>
+    <p class="tab-intro">ここボクの最新ショート動画。タップでYouTubeへ。</p>
+    <div class="shorts-grid">
+      <a href="https://www.youtube.com/shorts/DNpt-IGNa5A" target="_blank" rel="noopener" class="short-card"><span class="badge-new">NEW</span><img class="short-thumb" src="https://i.ytimg.com/vi/DNpt-IGNa5A/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://www.youtube.com/shorts/OE8KdZp0zh0" target="_blank" rel="noopener" class="short-card"><span class="badge-new">NEW</span><img class="short-thumb" src="https://i.ytimg.com/vi/OE8KdZp0zh0/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://www.youtube.com/shorts/TEMUQuBjDHo" target="_blank" rel="noopener" class="short-card"><span class="badge-new">NEW</span><img class="short-thumb" src="https://i.ytimg.com/vi/TEMUQuBjDHo/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/M_RaL3SqB_E" target="_blank" rel="noopener" class="short-card"><span class="badge-new">NEW</span><img class="short-thumb" src="https://i.ytimg.com/vi/M_RaL3SqB_E/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/Yhnt8iAhhMc" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/Yhnt8iAhhMc/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/UXHRfE2Asbs" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/UXHRfE2Asbs/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/gqXpTzuUFx0" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/gqXpTzuUFx0/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/ZlnYStbH2CA" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/ZlnYStbH2CA/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://www.youtube.com/shorts/xGxdTMAMYVo" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/xGxdTMAMYVo/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://www.youtube.com/shorts/3mpXliNls88" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/3mpXliNls88/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/TlbfOLAeUUY" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/TlbfOLAeUUY/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/zjgTOQdtBXY" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/zjgTOQdtBXY/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/47p49Sv1jC0" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/47p49Sv1jC0/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/6TyLA5Kp9P4" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/6TyLA5Kp9P4/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/c4CukPIHfeM" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/c4CukPIHfeM/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/in9InwQxOs0" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/in9InwQxOs0/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/t99V0N5DzRc" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/t99V0N5DzRc/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/XF-U6LnFch8" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/XF-U6LnFch8/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/VGp0gDRuu9s" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/VGp0gDRuu9s/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/v3X0NpfGr34" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/v3X0NpfGr34/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/s4PbR3qPK_0" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/s4PbR3qPK_0/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/AP4c33ZRdng" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/AP4c33ZRdng/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/hSDEW-bhObM" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/hSDEW-bhObM/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/me04ji3VNaQ" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/me04ji3VNaQ/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/Dyo4l9At0Hc" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/Dyo4l9At0Hc/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+      <a href="https://youtube.com/shorts/LkaK5xZ-uCI" target="_blank" rel="noopener" class="short-card"><img class="short-thumb" src="https://i.ytimg.com/vi/LkaK5xZ-uCI/hqdefault.jpg" alt="ここボク Short" loading="lazy"><div class="short-play"></div></a>
+    </div>
+  </div>
+
+  <div class="tab-panel" role="tabpanel" id="tab-games" aria-labelledby="tab-btn-games" hidden>
+    <p class="tab-intro">ここボクがこれまで実況してきたゲームたち。ジャンル問わず本気でプレイ中！</p>
+    <div class="games-grid"><a href="https://www.youtube.com/watch?v=mhYMTipgQG8&list=PLcpz5LEwl6YEdpcUmyQFiVxr3Ouhwrto-" target="_blank" rel="noopener" class="game-card"><img class="game-img" src="images/game-minecraft.jpg" width="460" height="215" alt="Minecraft" loading="lazy"><div class="game-overlay">Minecraft</div></a>
+      <a href="https://www.youtube.com/watch?v=Szw7B7YdmnM&list=PLcpz5LEwl6YF_XL8eTYO2Jk1bfqq6vIj_&index=6" target="_blank" rel="noopener" class="game-card"><img class="game-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/105600/header.jpg" alt="Terraria" loading="lazy"><div class="game-overlay">Terraria</div></a>
+      <a href="https://www.youtube.com/watch?v=BZP0cw_uZA8&list=PLcpz5LEwl6YHG04WU9zDyaU1C7aPc4S3P" target="_blank" rel="noopener" class="game-card"><img class="game-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/438100/header.jpg" alt="VRChat" loading="lazy"><div class="game-overlay">VRChat</div></a>
+      <a href="https://www.youtube.com/watch?v=H1Bgj7Zr9yY&list=PLcpz5LEwl6YGbf4i5jqkIyN1yzXAkusZn&index=4" target="_blank" rel="noopener" class="game-card"><img class="game-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/892970/header.jpg" alt="VALHEIM" loading="lazy"><div class="game-overlay">VALHEIM</div></a>
+      <a href="https://www.youtube.com/watch?v=5ifZ76voAfY&list=PLcpz5LEwl6YFastv-erqSXym6KVwVAdg2" target="_blank" rel="noopener" class="game-card"><img class="game-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/3241660/header.jpg" alt="R.E.P.O" loading="lazy"><div class="game-overlay">R.E.P.O</div></a>
+      <a href="https://www.youtube.com/watch?v=UlSkOOku_70&list=PLcpz5LEwl6YFbkHsMqhiSTiaOJzB1j1RP" target="_blank" rel="noopener" class="game-card"><img class="game-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/251570/header.jpg" alt="7 Days to Die" loading="lazy"><div class="game-overlay">7 Days to Die</div></a>
+      <a href="https://www.youtube.com/watch?v=-bVCshRsDNY&list=PLcpz5LEwl6YHAq825SZHLrUFeu_tHXiNR" target="_blank" rel="noopener" class="game-card"><img class="game-img" src="images/game-yapyap.jpg" width="460" height="215" alt="YAPYAP" loading="lazy"><div class="game-overlay">YAPYAP</div></a>
+      <a href="https://www.youtube.com/watch?v=nfM5OLLU01w&list=PLcpz5LEwl6YH9iAqW50zS6lWjI98w1OHC&index=4" target="_blank" rel="noopener" class="game-card" style="background:#0d1117;"><img class="game-img" src="images/game-hytale.jpg" width="460" height="215" alt="HYTALE" loading="lazy"><div class="game-overlay">HYTALE</div></a>
+      <a href="https://www.youtube.com/live/DuUrCZvVH8s?si=GUbXzzoN3eNfQ0Q_" target="_blank" rel="noopener" class="game-card"><img class="game-img" src="images/game-mimesis.webp" width="460" height="215" alt="MIMESIS" loading="lazy"><div class="game-overlay">MIMESIS</div></a>
+      <a href="https://www.youtube.com/watch?v=dZiK1Ie6-6M&list=PLcpz5LEwl6YHszAyF0t59fjBQRn_BkcPj" target="_blank" rel="noopener" class="game-card"><img class="game-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="GTA5" loading="lazy"><div class="game-overlay">GTA5</div></a>
+      <a href="https://www.youtube.com/watch?v=BN2sIisLdlU&t=7232s" target="_blank" rel="noopener" class="game-card"><img class="game-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/3097560/header.jpg" alt="Liar's Bar" loading="lazy"><div class="game-overlay">Liar's Bar</div></a>
+      <a href="https://www.youtube.com/watch?v=0DZlzUQ1y6E&t=4341s" target="_blank" rel="noopener" class="game-card"><img class="game-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2093010/header.jpg" alt="Supernatural" loading="lazy"><div class="game-overlay">Supernatural</div></a>
+      <a href="https://www.youtube.com/watch?v=LnvTgtl70P4&list=PLcpz5LEwl6YEF5C29VKtaJhYXTg08HZ5d" target="_blank" rel="noopener" class="game-card"><img class="game-img" src="images/game-kikaku.jpg" width="460" height="215" alt="企画系" loading="lazy"><div class="game-overlay">企画系</div></a>
+    </div>
+  </div>
+
+
+
+  <!-- ---- ここラジ ---- -->
+  <div class="tab-panel" role="tabpanel" id="tab-radio" aria-labelledby="tab-btn-radio" hidden>
+    <p class="radio-intro">毎週投稿中のここラジ（ラジオ動画）アーカイブ。過去回もここからチェック！</p>
+    <div class="radio-grid">
+
+      <a href="https://www.youtube.com/watch?v=UpzFdSOeqj0" target="_blank" rel="noopener" class="radio-card">
+        <div class="radio-thumb-wrap">
+          <img class="radio-thumb" src="https://i.ytimg.com/vi/UpzFdSOeqj0/hqdefault.jpg" alt="最新回" loading="lazy">
+          <div class="radio-play"></div>
+          <span class="radio-badge">NEW</span>
+        </div>
+        <div class="radio-info">
+          <div class="radio-ep">EP.09</div>
+          <div class="radio-title" id="radio-title-ep09">読み込み中...</div>
+        </div>
+      </a>
+
+      <a href="https://youtu.be/fFxGYcmqA1A" target="_blank" rel="noopener" class="radio-card">
+        <div class="radio-thumb-wrap">
+          <img class="radio-thumb" src="https://i.ytimg.com/vi/fFxGYcmqA1A/hqdefault.jpg" alt="EP.08" loading="lazy">
+          <div class="radio-play"></div>
+        </div>
+        <div class="radio-info">
+          <div class="radio-ep">EP.08</div>
+          <div class="radio-title" id="radio-title-ep08">読み込み中...</div>
+        </div>
+      </a>
+
+      <a href="https://youtu.be/YEpgwGlt-c0" target="_blank" rel="noopener" class="radio-card">
+        <div class="radio-thumb-wrap">
+          <img class="radio-thumb" src="https://i.ytimg.com/vi/YEpgwGlt-c0/hqdefault.jpg" alt="EP.07" loading="lazy">
+          <div class="radio-play"></div>
+        </div>
+        <div class="radio-info">
+          <div class="radio-ep">EP.07</div>
+          <div class="radio-title" id="radio-title-ep07">読み込み中...</div>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=9Kyy6gVGl7g&t=3s" target="_blank" rel="noopener" class="radio-card">
+        <div class="radio-thumb-wrap">
+          <img class="radio-thumb" src="https://i.ytimg.com/vi/9Kyy6gVGl7g/hqdefault.jpg" alt="第六回" loading="lazy">
+          <div class="radio-play"></div>
+        </div>
+        <div class="radio-info">
+          <div class="radio-ep">EP.06</div>
+          <div class="radio-title">RAFT#4アフタートーク</div>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=MeUU5ce-x9k" target="_blank" rel="noopener" class="radio-card">
+        <div class="radio-thumb-wrap">
+          <img class="radio-thumb" src="https://i.ytimg.com/vi/MeUU5ce-x9k/hqdefault.jpg" alt="第五回" loading="lazy">
+          <div class="radio-play"></div>
+        </div>
+        <div class="radio-info">
+          <div class="radio-ep">EP.05</div>
+          <div class="radio-title">RAFT#3アフタートーク</div>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=n2-_naovT2E" target="_blank" rel="noopener" class="radio-card">
+        <div class="radio-thumb-wrap">
+          <img class="radio-thumb" src="https://i.ytimg.com/vi/n2-_naovT2E/hqdefault.jpg" alt="第四回" loading="lazy">
+          <div class="radio-play"></div>
+        </div>
+        <div class="radio-info">
+          <div class="radio-ep">EP.04</div>
+          <div class="radio-title">RAFT#2アフタートーク</div>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=KHKofpf4434" target="_blank" rel="noopener" class="radio-card">
+        <div class="radio-thumb-wrap">
+          <img class="radio-thumb" src="https://i.ytimg.com/vi/KHKofpf4434/hqdefault.jpg" alt="第三回" loading="lazy">
+          <div class="radio-play"></div>
+        </div>
+        <div class="radio-info">
+          <div class="radio-ep">EP.03</div>
+          <div class="radio-title">RAFT#1アフタートーク</div>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=w0ukdj5aiV0" target="_blank" rel="noopener" class="radio-card">
+        <div class="radio-thumb-wrap">
+          <img class="radio-thumb" src="https://i.ytimg.com/vi/w0ukdj5aiV0/hqdefault.jpg" alt="第二回" loading="lazy">
+          <div class="radio-play"></div>
+        </div>
+        <div class="radio-info">
+          <div class="radio-ep">EP.02</div>
+          <div class="radio-title">ここラジ 第二回</div>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=eM7OO5qmUCY" target="_blank" rel="noopener" class="radio-card">
+        <div class="radio-thumb-wrap">
+          <img class="radio-thumb" src="https://i.ytimg.com/vi/eM7OO5qmUCY/hqdefault.jpg" alt="第一回" loading="lazy">
+          <div class="radio-play"></div>
+        </div>
+        <div class="radio-info">
+          <div class="radio-ep">EP.01</div>
+          <div class="radio-title">ここラジ 第一回</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+
+  <!-- ---- GOODS ---- -->
+  <div class="tab-panel" role="tabpanel" id="tab-goods" aria-labelledby="tab-btn-goods" hidden>
+    <div class="goods-wrap reveal">
+      <div class="goods-coming">
+        <div class="goods-icon">🛍️</div>
+        <div class="goods-tag">OFFICIAL GOODS</div>
+        <div class="goods-title">COMING<span>SOON</span></div>
+        <p class="goods-desc">
+          ここボク公式グッズ、鋭意準備中。<br>
+          続報はX・YouTubeでお知らせします。お楽しみに！
+        </p>
+        <div class="goods-sns">
+          <a href="https://x.com/kokoboku_1009" target="_blank" rel="noopener" class="btn-outline">
+            <span>𝕏 最新情報はXで</span>
+          </a>
+        </div>
+        <div class="goods-dots">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-panel active" role="tabpanel" id="tab-kokoboku" aria-labelledby="tab-btn-kokoboku">
+    <div class="history-wrap reveal">
+      <p class="history-lead">ここからはじまるボクらの世界</p>
+      <p class="history-subtitle">〜BGMうるさいすねぇ〜</p>
+      <div class="history-body">
+
+        <div class="history-sec">
+          <h4>// はじまり</h4>
+          <p>「<strong>ここからはじまるボクらの世界〜BGMうるさいすねぇ〜</strong>」——略して<strong>ここボク</strong>。<br>新しいゲームを始めるたびに、初期設定のBGMがうるさいと言い続けながら。それでも止まらない5人のゲーム実況グループ。<br><strong>をやつ、のじもん、のやみぃ、とこ、ちワ</strong>——バラバラな個性が一箇所に集まった。</p>
+        </div>
+
+        <div class="history-sec">
+          <h4>// 5人の化学反応</h4>
+          <p>テキトーなをやつ、よく笑うのじもん、謎多きのやみぃ、<br>ガキなとこ、なぜか不憫なちワ。<br>誰一人として同じ色を持っていない。だからこそ、毎回が予測不能。<br>笑って、叫んで、たまに真剣になって——これがボクたちのスタイル。</p>
+        </div>
+
+        <div class="history-sec">
+          <h4>// ここボクの由来</h4>
+          <p>なぜ「ここからはじまるボクらの世界〜BGMうるさいすねぇ〜」という名前なのか。<br>その答えはこの動画の中にある——</p>
+          <a href="https://www.youtube.com/watch?v=2QzlXqKjnc8" target="_blank" rel="noopener" class="yurai-card">
+            <div class="yurai-thumb">
+              <img src="https://i.ytimg.com/vi/2QzlXqKjnc8/hqdefault.jpg" alt="ここボクの由来動画" loading="lazy"
+                   onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/2QzlXqKjnc8/mqdefault.jpg'">
+              <div class="yurai-play">▶</div>
+            </div>
+            <div class="yurai-info">
+              <div class="yurai-badge">📺 由来動画</div>
+              <div class="yurai-desc">名前の由来、ここボクがはじまった理由</div>
+              <div class="yurai-cta">YouTubeで見る →</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="history-sec">
+          <h4>// 毎週の配信</h4>
+          <p>毎週<strong>どこかの曜日の22:00</strong>からYouTubeでLIVE配信。<br>どんなゲームをやるかは、始まるまでわからない。<br>それが、ここボクの面白さ。<br>高評価・チャンネル登録でいつでも参加できる——<strong>ここがボクらの世界の入口だ。</strong></p>
+        </div>
+
+        <div class="history-sec">
+          <h4>// これからのボクら</h4>
+          <p>ジャンルを問わず、とにかく本気でゲームをやる。<br>視聴者と一緒に作っていく空間——それがここボクの目指す場所。<br><strong>まだ世界ははじまったばかりだ。</strong></p>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>    </div>
+  </div>
+</section>
+
+
+
+<!-- ============================================================
+   OBENRI SECTION — ここラジ お便り
+   ============================================================ -->
+<div id="obenri" class="obenri-section">
+  <div class="obenri-inner reveal">
+
+    <div class="obenri-header">
+      <div class="obenri-icon">📻</div>
+      <div class="obenri-header-text">
+        <div class="obenri-tag">WEEKLY RADIO</div>
+        <div class="obenri-title">ここラジ<span>お便り</span>募集中！</div>
+        <p class="obenri-desc">
+          毎週投稿中のここラジ（ラジオ動画）で読まれるかも！<br>
+          匿名でOK、なんでもお気軽に送ってね。
+        </p>
+      </div>
+    </div>
+
+    <div class="obenri-rules">
+      <div class="obenri-rule">
+        <div class="obenri-rule-icon">✏️</div>
+        <div class="obenri-rule-title">なんでもOK</div>
+        <div class="obenri-rule-text">相談・近況・ボケ・ツッコミ・メンバーへの質問、なんでも歓迎！</div>
+      </div>
+      <div class="obenri-rule">
+        <div class="obenri-rule-icon">🎭</div>
+        <div class="obenri-rule-title">匿名OK</div>
+        <div class="obenri-rule-text">ラジオネームだけでOK。本名は不要です。</div>
+      </div>
+      <div class="obenri-rule">
+        <div class="obenri-rule-icon">📺</div>
+        <div class="obenri-rule-title">読まれるかも</div>
+        <div class="obenri-rule-text">送ったお便りは毎週のここラジで紹介されることも！</div>
+      </div>
+    </div>
+
+    <div class="obenri-btn-wrap">
+      <a href="https://forms.gle/oY9FJfZWBkUiJRFr8" target="_blank" rel="noopener" class="btn-obenri">
+        <span>📨 お便りを送る</span>
+      </a>
+      <p class="obenri-note">※ Googleフォームが開きます　／　匿名・無料で送れます</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+   FAN POST SECTION — 視聴者投稿コーナー
+   ============================================================ -->
+<div class="fanpost-section reveal">
+  <div class="fanpost-left">
+    <div class="fanpost-label">FAN POST</div>
+    <div class="fanpost-title">
+      ファンアート・<br>応援メッセージ<br>大募集！
+    </div>
+    <p class="fanpost-desc">
+      感想・ファンアート・プレイ中の気持ち、<br>
+      なんでもOK。Xで <strong>#ここボク</strong> をつけて<br>
+      投稿してくれたらメンバーが見るかも！
+    </p>
+    <a href="https://x.com/search?q=%23%E3%81%93%E3%81%93%E3%83%9C%E3%82%AF&src=typed_query&f=live"
+       target="_blank" rel="noopener" class="btn-fanpost">
+      <span>𝕏 &nbsp;#ここボク の投稿を見る</span>
+    </a>
+  </div>
+
+  <div class="fanpost-right">
+    <div class="fanpost-tag-cloud">
+      <div class="fanpost-step">
+        <div class="fanpost-step-icon">✏️</div>
+        <div class="fanpost-step-body">
+          <div class="fanpost-step-title">STEP 01 &nbsp;— &nbsp;作る</div>
+          <div class="fanpost-step-text">ファンアート・メッセージ・<br>感想など好きなものを用意</div>
+        </div>
+      </div>
+      <div class="fanpost-divider"></div>
+      <div class="fanpost-step">
+        <div class="fanpost-step-icon">📮</div>
+        <div class="fanpost-step-body">
+          <div class="fanpost-step-title">STEP 02 &nbsp;— &nbsp;投稿</div>
+          <div class="fanpost-step-text">Xで <strong style="color:var(--y);">#ここボク</strong> を<br>つけて投稿するだけ！</div>
+        </div>
+      </div>
+      <div class="fanpost-divider"></div>
+      <div class="fanpost-step">
+        <div class="fanpost-step-icon">👀</div>
+        <div class="fanpost-step-body">
+          <div class="fanpost-step-title">STEP 03 &nbsp;— &nbsp;チェック</div>
+          <div class="fanpost-step-text">メンバーがハッシュタグを<br>チェックしてるかも…！</div>
+        </div>
+      </div>
+      <div class="fanpost-hashtag">#ここボク</div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <div class="cta-inner reveal">
+    <h2>🎮 チャンネル登録おねがいします！</h2>
+    <p>毎週 どこかの曜日 22:00〜YouTubeでLIVE配信中。<br>高評価・チャンネル登録で通知をオンにしてね！</p>
+    <a href="https://www.youtube.com/@KOKOBOKUBGM" target="_blank" rel="noopener" class="btn-primary"><span>▶ YouTubeでチャンネル登録</span></a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">ここからはじまるボクらの世界〜BGMうるさいすねぇ〜</div>
+  <div class="footer-links">
+    <a href="https://www.youtube.com/@KOKOBOKUBGM" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://x.com/kokoboku_1009" target="_blank" rel="noopener">X (Twitter)</a>
+  </div>
+  <small>© ここボク / BGM NOISY. All rights reserved.</small>
+</footer>
+
+
+  <div class="member-modal" id="modal-oyatsu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="をやつのプロフィール">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close aria-label="閉じる">✕</button>
+      <div class="modal-header" style="--mc:#444444">
+        <img class="modal-icon" src="images/member-oyatsu.webp" alt="をやつ" width="68" height="68">
+        <div class="modal-header-info">
+          <div class="modal-num">NO.01</div>
+          <div class="modal-name">をやつ</div>
+          <div class="modal-tag">テキトー</div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <div class="modal-sec-title">// 人物</div>
+          <p>普段は歌を歌ったりライブ活動をメインに活動している。ここボクの中ではリーダー的立ち位置だが本人はリーダー不在と言い張っている。</p>
+        </div>
+        <div class="modal-grid2">
+          <div class="modal-section">
+            <div class="modal-sec-title">🎂 誕生日</div>
+            <p>3月2日</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🎮 担当ポジション</div>
+            <p>ここボクではボケ多め、ツッコミもするが本人はボケることを好んでいる。</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🍜 好きな食べ物</div>
+            <p>こどもが好きそうな食べ物全般</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🚫 嫌いな食べ物</div>
+            <p>きのこ類全般</p>
+          </div>
+        </div>
+        <div class="modal-section">
+          <div class="modal-sec-title">🔗 SNS</div>
+          <div class="modal-sns">
+            <a href="https://www.youtube.com/@woyatsu" target="_blank" rel="noopener" class="modal-sns-btn yt">▶ YouTube</a>
+            <a href="https://x.com/woyatsu"  target="_blank" rel="noopener" class="modal-sns-btn x">𝕏 X</a>
+          </div>
+        </div>
+        
+      <div class="modal-pickup-label">📺 PICK UP</div>
+      <a href="https://youtu.be/yu431wPLVe4" target="_blank" rel="noopener" class="modal-pickup-card">
+        <div class="modal-pickup-thumb">
+          <img src="https://i.ytimg.com/vi/yu431wPLVe4/sddefault.jpg" alt="おすすめ動画" loading="lazy"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/yu431wPLVe4/mqdefault.jpg'">
+          <div class="modal-pickup-play">▶</div>
+        </div>
+        <div class="modal-pickup-info">
+          <div class="modal-pickup-badge">おすすめ動画</div>
+          <div class="modal-pickup-cta">YouTubeで見る →</div>
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="member-modal" id="modal-nojmon" aria-hidden="true" role="dialog" aria-modal="true" aria-label="のじもんのプロフィール">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close aria-label="閉じる">✕</button>
+      <div class="modal-header" style="--mc:#8B2FC9">
+        <img class="modal-icon" src="images/member-nojmon.webp" alt="のじもん" width="68" height="68">
+        <div class="modal-header-info">
+          <div class="modal-num">NO.02</div>
+          <div class="modal-name">のじもん</div>
+          <div class="modal-tag">ゲラ</div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <div class="modal-sec-title">// 人物</div>
+          <p>神出鬼没の配信者、ここボク以外では中々お目にかかれず…ここボクの中では特徴的な笑い方で全体を盛り上げる。</p>
+        </div>
+        <div class="modal-grid2">
+          <div class="modal-section">
+            <div class="modal-sec-title">🎂 誕生日</div>
+            <p>12月9日</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🎮 担当ポジション</div>
+            <p>ここボクではボケ多め、ボキャブラリー豊富だから誰かのボケも拾うことも多い。</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🍜 好きな食べ物</div>
+            <p>パン</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🚫 嫌いな食べ物</div>
+            <p>生バナナ</p>
+          </div>
+        </div>
+        <div class="modal-section">
+          <div class="modal-sec-title">🔗 SNS</div>
+          <div class="modal-sns">
+            <a href="https://www.youtube.com/@%E3%81%AE%E3%81%98%E3%82%82%E3%82%93" target="_blank" rel="noopener" class="modal-sns-btn yt">▶ YouTube</a>
+            <a href="https://x.com/nojimon1209"  target="_blank" rel="noopener" class="modal-sns-btn x">𝕏 X</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="member-modal" id="modal-noyami" aria-hidden="true" role="dialog" aria-modal="true" aria-label="のやみぃのプロフィール">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close aria-label="閉じる">✕</button>
+      <div class="modal-header" style="--mc:#1E90FF">
+        <img class="modal-icon" src="images/member-noyami.webp" alt="のやみぃ" width="68" height="68">
+        <div class="modal-header-info">
+          <div class="modal-num">NO.03</div>
+          <div class="modal-name">のやみぃ</div>
+          <div class="modal-tag">謎</div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <div class="modal-sec-title">// 人物</div>
+          <p>ガンダム好き、自分をガンダムだと思いこんでいる掴みどころがない不思議な男。配信の挨拶では何を言っているか分からないことが多い（ノイキャン）。</p>
+        </div>
+        <div class="modal-grid2">
+          <div class="modal-section">
+            <div class="modal-sec-title">🎂 誕生日</div>
+            <p>7月1日</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🎮 担当ポジション</div>
+            <p>ここボクでは宇宙的なボケ多め、独特な世界観でメンバーも視聴者も困惑させる。</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🍜 好きな食べ物</div>
+            <p>イタリアン</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🚫 嫌いな食べ物</div>
+            <p>パセリ</p>
+          </div>
+        </div>
+        <div class="modal-section">
+          <div class="modal-sec-title">🔗 SNS</div>
+          <div class="modal-sns">
+            <a href="https://www.youtube.com/@noyami_shuch" target="_blank" rel="noopener" class="modal-sns-btn yt">▶ YouTube</a>
+            <a href="https://x.com/noyami_shuch"  target="_blank" rel="noopener" class="modal-sns-btn x">𝕏 X</a>
+          </div>
+        </div>
+        
+      <div class="modal-pickup-label">📺 PICK UP</div>
+      <a href="https://www.youtube.com/watch?v=PoGhXxbyc-s" target="_blank" rel="noopener" class="modal-pickup-card">
+        <div class="modal-pickup-thumb">
+          <img src="https://i.ytimg.com/vi/PoGhXxbyc-s/sddefault.jpg" alt="おすすめ動画" loading="lazy"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/PoGhXxbyc-s/mqdefault.jpg'">
+          <div class="modal-pickup-play">▶</div>
+        </div>
+        <div class="modal-pickup-info">
+          <div class="modal-pickup-badge">おすすめ動画</div>
+          <div class="modal-pickup-cta">YouTubeで見る →</div>
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="member-modal" id="modal-toko" aria-hidden="true" role="dialog" aria-modal="true" aria-label="とこのプロフィール">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close aria-label="閉じる">✕</button>
+      <div class="modal-header" style="--mc:#5B4EE8">
+        <img class="modal-icon" src="images/member-toko.webp" alt="とこ" width="68" height="68">
+        <div class="modal-header-info">
+          <div class="modal-num">NO.04</div>
+          <div class="modal-name">とこ</div>
+          <div class="modal-tag">ガキ</div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <div class="modal-sec-title">// 人物</div>
+          <p>普段は歌の投稿やMIX師として活動している。ここボク内では一番若いのもあるが精神的に幼い部分もあり、メンバーからはガキと言われることが多いが愛嬌がある男。</p>
+        </div>
+        <div class="modal-grid2">
+          <div class="modal-section">
+            <div class="modal-sec-title">🎂 誕生日</div>
+            <p>3月11日</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🎮 担当ポジション</div>
+            <p>ここボクではボケ多め。狙ったら壊滅的におもしろくない。</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🍜 好きな食べ物</div>
+            <p>焼肉</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🚫 嫌いな食べ物</div>
+            <p>なし</p>
+          </div>
+        </div>
+        <div class="modal-section">
+          <div class="modal-sec-title">🔗 SNS</div>
+          <div class="modal-sns">
+            <a href="https://www.youtube.com/@tokoroten0311" target="_blank" rel="noopener" class="modal-sns-btn yt">▶ YouTube</a>
+            <a href="https://x.com/_tokoroten__"  target="_blank" rel="noopener" class="modal-sns-btn x">𝕏 X</a>
+          </div>
+        </div>
+        
+      <div class="modal-pickup-label">📺 PICK UP</div>
+      <a href="https://www.youtube.com/watch?v=rNm-HKFpcd0" target="_blank" rel="noopener" class="modal-pickup-card">
+        <div class="modal-pickup-thumb">
+          <img src="https://i.ytimg.com/vi/rNm-HKFpcd0/sddefault.jpg" alt="おすすめ動画" loading="lazy"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/rNm-HKFpcd0/mqdefault.jpg'">
+          <div class="modal-pickup-play">▶</div>
+        </div>
+        <div class="modal-pickup-info">
+          <div class="modal-pickup-badge">おすすめ動画</div>
+          <div class="modal-pickup-cta">YouTubeで見る →</div>
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="member-modal" id="modal-chiwa" aria-hidden="true" role="dialog" aria-modal="true" aria-label="ちワのプロフィール">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close aria-label="閉じる">✕</button>
+      <div class="modal-header" style="--mc:#DDDDDD">
+        <img class="modal-icon" src="images/member-chiwa.webp" alt="ちワ" width="68" height="68">
+        <div class="modal-header-info">
+          <div class="modal-num">NO.05</div>
+          <div class="modal-name">ちワ</div>
+          <div class="modal-tag">不憫</div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <div class="modal-sec-title">// 人物</div>
+          <p>普段は歌、ゲーム配信、ライブ活動等幅広く活動している。圧倒的不憫なことが多く、視聴者からも不憫くんと言われるほど。</p>
+        </div>
+        <div class="modal-grid2">
+          <div class="modal-section">
+            <div class="modal-sec-title">🎂 誕生日</div>
+            <p>7月12日</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🎮 担当ポジション</div>
+            <p>ここボクではツッコミ多め。</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🍜 好きな食べ物</div>
+            <p>麻婆豆腐・オムライス</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-sec-title">🚫 嫌いな食べ物</div>
+            <p>海鮮類</p>
+          </div>
+        </div>
+        <div class="modal-section">
+          <div class="modal-sec-title">🔗 SNS</div>
+          <div class="modal-sns">
+            <a href="https://www.youtube.com/@chiwachannel587" target="_blank" rel="noopener" class="modal-sns-btn yt">▶ YouTube</a>
+            <a href="https://x.com/chi_waFF15"  target="_blank" rel="noopener" class="modal-sns-btn x">𝕏 X</a>
+          </div>
+        </div>
+        
+      <div class="modal-pickup-label">📺 PICK UP</div>
+      <a href="https://www.youtube.com/watch?v=4lm4mxYyes0" target="_blank" rel="noopener" class="modal-pickup-card">
+        <div class="modal-pickup-thumb">
+          <img src="https://i.ytimg.com/vi/4lm4mxYyes0/sddefault.jpg" alt="おすすめ動画" loading="lazy"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/4lm4mxYyes0/mqdefault.jpg'">
+          <div class="modal-pickup-play">▶</div>
+        </div>
+        <div class="modal-pickup-info">
+          <div class="modal-pickup-badge">おすすめ動画</div>
+          <div class="modal-pickup-cta">YouTubeで見る →</div>
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+
+<script>
+const tabBtns=document.querySelectorAll('.tab-btn');
+const tabPanels=document.querySelectorAll('.tab-panel');
+function activateTab(name){
+  tabBtns.forEach(function(b){
+    var isActive = b.dataset.tab === name && !b.dataset.scroll;
+    b.classList.toggle('active', isActive);
+    b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
+  tabPanels.forEach(function(p){
+    var isActive = p.id === 'tab-' + name;
+    p.classList.toggle('active', isActive);
+    if(isActive){ p.removeAttribute('hidden'); }
+    else        { p.setAttribute('hidden',''); }
+  });
+  setTimeout(initReveal, 50);
+}
+tabBtns.forEach(b=>{
+  let tbX=0,tbY=0,tbM=false;
+  b.addEventListener('touchstart',(e)=>{tbX=e.touches[0].clientX;tbY=e.touches[0].clientY;tbM=false;},{passive:true});
+  b.addEventListener('touchmove',(e)=>{if(Math.abs(e.touches[0].clientX-tbX)>8||Math.abs(e.touches[0].clientY-tbY)>8)tbM=true;},{passive:true});
+  b.addEventListener('touchend',(e)=>{if(tbM)return;e.preventDefault();activateTab(b.dataset.tab);},{passive:false});
+  b.addEventListener('click',()=>activateTab(b.dataset.tab));
+});
+document.querySelectorAll('[data-target]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=a.dataset.target;if(!t)return;
+    e.preventDefault();closeDrawer();
+    document.getElementById('tabs').scrollIntoView({behavior:'smooth'});
+    activateTab(t);
+  });
+});
+
+const hamburger=document.getElementById('hamburger');
+const drawer=document.getElementById('drawer');
+function openDrawer(){hamburger.classList.add('open');hamburger.setAttribute('aria-expanded','true');drawer.classList.add('open');drawer.setAttribute('aria-hidden','false');}
+function closeDrawer(){hamburger.classList.remove('open');hamburger.setAttribute('aria-expanded','false');drawer.classList.remove('open');drawer.setAttribute('aria-hidden','true');}
+hamburger.addEventListener('click',function(e){e.stopPropagation();drawer.classList.contains('open')?closeDrawer():openDrawer();});
+hamburger.addEventListener('touchend',function(e){e.preventDefault();e.stopPropagation();drawer.classList.contains('open')?closeDrawer():openDrawer();},{passive:false});
+document.addEventListener('click',function(e){if(!hamburger.contains(e.target)&&!drawer.contains(e.target))closeDrawer();});
+document.addEventListener('touchstart',function(e){if(!hamburger.contains(e.target)&&!drawer.contains(e.target))closeDrawer();},{passive:true});
+drawer.querySelectorAll('a').forEach(a=>{a.addEventListener('click',closeDrawer);a.addEventListener('touchend',closeDrawer,{passive:true});});
+
+function openModal(id){
+  var m=document.getElementById('modal-'+id);
+  if(!m)return;
+  var opener=document.querySelector('[data-modal="'+id+'"]');
+  m._opener=opener;
+  m.classList.add('open');
+  m.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  var btn=m.querySelector('.modal-close');
+  if(btn)setTimeout(function(){btn.focus();},50);
+}
+function closeModal(){
+  document.querySelectorAll('.member-modal.open').forEach(function(m){
+    m.classList.remove('open');
+    m.setAttribute('aria-hidden','true');
+    if(m._opener){m._opener.focus();m._opener=null;}
+  });
+  document.body.style.overflow='';
+}
+document.querySelectorAll('.member-card[data-modal]').forEach(card=>{
+  let tcSX=0,tcSY=0,tcMoved=false;
+  card.addEventListener('touchstart',(e)=>{tcSX=e.touches[0].clientX;tcSY=e.touches[0].clientY;tcMoved=false;},{passive:true});
+  card.addEventListener('touchmove',(e)=>{if(Math.abs(e.touches[0].clientX-tcSX)>8||Math.abs(e.touches[0].clientY-tcSY)>8)tcMoved=true;},{passive:true});
+  card.addEventListener('touchend',(e)=>{if(tcMoved)return;e.preventDefault();openModal(card.dataset.modal);},{passive:false});
+  card.addEventListener('click',()=>openModal(card.dataset.modal));
+  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openModal(card.dataset.modal);}});
+});
+document.querySelectorAll('[data-close]').forEach(el=>{
+  let tcX=0,tcY=0,tcM=false;
+  el.addEventListener('touchstart',(e)=>{tcX=e.touches[0].clientX;tcY=e.touches[0].clientY;tcM=false;},{passive:true});
+  el.addEventListener('touchmove',(e)=>{if(Math.abs(e.touches[0].clientX-tcX)>8||Math.abs(e.touches[0].clientY-tcY)>8)tcM=true;},{passive:true});
+  el.addEventListener('touchend',(e)=>{if(tcM)return;e.preventDefault();closeModal();},{passive:false});
+  el.addEventListener('click',closeModal);
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+
+
+/* ============================================================
+   YouTube タイトル自動取得（統合）▼ 動画URLはここを更新
+   ============================================================ */
+(function() {
+  var items = [
+    { id: 'latest-title',     url: 'https://www.youtube.com/watch?v=AemKzdiPNkI', fallback: 'ここボク 最新動画' },
+    { id: 'radio-title-ep09', url: 'https://www.youtube.com/watch?v=UpzFdSOeqj0', fallback: 'ここラジ EP.09' },
+    { id: 'radio-title-ep08', url: 'https://www.youtube.com/watch?v=fFxGYcmqA1A', fallback: 'ここラジ EP.08' },
+    { id: 'radio-title-ep07', url: 'https://www.youtube.com/watch?v=YEpgwGlt-c0', fallback: 'ここラジ EP.07' },
+  ];
+  items.forEach(function(item) {
+    var el = document.getElementById(item.id);
+    if (!el) return;
+    fetch('https://www.youtube.com/oembed?url=' + encodeURIComponent(item.url) + '&format=json')
+      .then(function(r) { return r.json(); })
+      .then(function(d) { if (d.title) el.textContent = d.title; })
+      .catch(function() { el.textContent = item.fallback; });
+  });
+})();
+
+/* 配信スケジュール動的更新 */
+(function() {
+  var dateEl    = document.getElementById('next-live-date');
+  var timeEl    = document.getElementById('next-live-time');
+  var tickerEls = document.querySelectorAll('.ticker-schedule');
+
+  if (typeof NEXT_LIVE_DATE !== 'undefined' && NEXT_LIVE_DATE) {
+    if (dateEl) dateEl.textContent = NEXT_LIVE_DATE;
+    if (timeEl) timeEl.innerHTML   = '&nbsp;22:00〜';
+    tickerEls.forEach(function(el) {
+      el.textContent = '次回配信 ' + NEXT_LIVE_DATE + ' 22:00〜';
+    });
+  } else {
+    if (dateEl) dateEl.textContent = '次回配信はXでお知らせ';
+    if (timeEl) timeEl.textContent = '';
+    tickerEls.forEach(function(el) {
+      el.textContent = '次回配信はXでお知らせ！';
+    });
+  }
+})();
+
+/* QUOTESクリックで名言集までスクロール */
+document.querySelectorAll('[data-scroll]').forEach(function(el) {
+  el.addEventListener('click', function() {
+    setTimeout(function() {
+      var target = document.getElementById(el.dataset.scroll);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 150);
+  });
+});
+
+
+function initReveal(){
+  const els=document.querySelectorAll('.reveal:not(.in)');
+  if(!els.length)return;
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.06});
+  els.forEach(el=>obs.observe(el));
+}
+initReveal();
+</script>
+<!-- スマホ固定ボタン -->
+<a href="https://www.youtube.com/watch?v=AemKzdiPNkI" target="_blank" rel="noopener" class="fixed-yt-btn" aria-label="最新動画を見る">
+  <span>▶ 最新動画を見る</span>
+</a>
+
+</body>
+</html>
