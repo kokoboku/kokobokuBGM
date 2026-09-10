@@ -763,16 +763,6 @@ footer small{font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.1em;}
   .footer-logo{letter-spacing:.14em;font-size:9px;}
 }
 
-/* prefers-reduced-motion 対応 */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  .ticker { animation: none; }
-  .logo-wrap img { animation: none; }
-}
 
 </style>
 </head>
@@ -833,7 +823,7 @@ footer small{font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.1em;}
 
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker">
-    <span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span id="ticker-schedule">次回配信はXでお知らせ</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span><span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span id="ticker-schedule">次回配信はXでお知らせ</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span>
+    <span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span id="ticker-schedule">次回配信 7/24（金）22:00〜</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span><span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span id="ticker-schedule">次回配信 7/24（金）22:00〜</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span>
   </div>
 </div>
 
@@ -1829,35 +1819,19 @@ fetch('https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=AemKzd
 
 
 
-/* ============================================================
-   YouTube タイトル自動取得（統合）▼ 動画URLはここを更新
-   ============================================================ */
-(function() {
-  var items = [
-    { id: 'latest-title',     url: 'https://www.youtube.com/watch?v=AemKzdiPNkI', fallback: 'ここボク 最新動画' },
-    { id: 'radio-title-ep09', url: 'https://www.youtube.com/watch?v=UpzFdSOeqj0', fallback: 'ここラジ EP.09' },
-    { id: 'radio-title-ep08', url: 'https://www.youtube.com/watch?v=fFxGYcmqA1A', fallback: 'ここラジ EP.08' },
-    { id: 'radio-title-ep07', url: 'https://www.youtube.com/watch?v=YEpgwGlt-c0', fallback: 'ここラジ EP.07' },
-  ];
-  items.forEach(function(item) {
-    var el = document.getElementById(item.id);
-    if (!el) return;
-    fetch('https://www.youtube.com/oembed?url=' + encodeURIComponent(item.url) + '&format=json')
-      .then(function(r) { return r.json(); })
-      .then(function(d) { if (d.title) el.textContent = d.title; })
-      .catch(function() { el.textContent = item.fallback; });
-  });
-})();
-
-/* QUOTESクリックで名言集までスクロール */
-document.querySelectorAll('[data-scroll]').forEach(function(el) {
-  el.addEventListener('click', function() {
-    setTimeout(function() {
-      var target = document.getElementById(el.dataset.scroll);
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 150);
-  });
+/* RADIOタイトル自動取得 */
+[
+  {id:'radio-title-ep09', url:'https://www.youtube.com/watch?v=UpzFdSOeqj0'},
+  {id:'radio-title-ep08', url:'https://www.youtube.com/watch?v=fFxGYcmqA1A'},
+  {id:'radio-title-ep07', url:'https://www.youtube.com/watch?v=YEpgwGlt-c0'},
+].forEach(function(item) {
+  fetch('https://www.youtube.com/oembed?url=' + encodeURIComponent(item.url) + '&format=json')
+    .then(function(r){ return r.json(); })
+    .then(function(d){ var el=document.getElementById(item.id); if(el&&d.title) el.textContent=d.title; })
+    .catch(function(){ var el=document.getElementById(item.id); if(el) el.textContent='ここラジ'; });
 });
+
+
 
 
 function initReveal(){
