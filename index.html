@@ -624,6 +624,50 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9000;
 
 
 
+
+/* ── お知らせセクション ── */
+.notice-section{
+  max-width:1160px;margin:0 auto;padding:0 14px 40px;
+}
+.notice-inner{
+  display:flex;align-items:flex-start;gap:18px;
+  background:#0e0e0e;
+  border:1px solid rgba(30,144,255,.35);
+  border-left:4px solid #1E90FF;
+  padding:20px 24px;
+  clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);
+  position:relative;overflow:hidden;
+}
+.notice-inner::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(30,144,255,.05),transparent);
+  pointer-events:none;
+}
+.notice-icon{
+  font-size:20px;flex-shrink:0;margin-top:1px;
+  filter:drop-shadow(0 0 6px rgba(30,144,255,.6));
+}
+.notice-body{position:relative;z-index:1;}
+.notice-label{
+  font-family:'Black Han Sans',sans-serif;
+  font-size:10px;letter-spacing:.38em;
+  color:rgba(30,144,255,.75);
+  margin-bottom:7px;text-transform:uppercase;
+}
+.notice-text{
+  font-size:13px;line-height:1.9;
+  color:rgba(255,255,255,.75);
+  letter-spacing:.04em;
+}
+.notice-name{
+  color:#1E90FF;font-weight:700;
+}
+@media(max-width:600px){
+  .notice-section{padding:0 12px 32px;}
+  .notice-inner{padding:16px 18px;gap:12px;}
+  .notice-text{font-size:12px;}
+}
+
 /* ── OBENRI SECTION ── */
 .obenri-section{max-width:1160px;margin:0 auto;padding:0 14px 80px;}
 .obenri-inner{
@@ -811,7 +855,7 @@ footer small{font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.1em;}
     <div class="next-live">
       <div class="next-live-dot"></div>
       <div class="next-live-label">NEXT LIVE</div>
-      <div class="next-live-date"><span class="date-highlight">7月24日（金）</span>&nbsp;22:00〜</div>
+      <div class="next-live-date"><span class="date-highlight">9月10日（木）</span>&nbsp;22:00〜</div>
     </div>
   </div>
   <div class="hero-cta">
@@ -823,7 +867,7 @@ footer small{font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.1em;}
 
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker">
-    <span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span id="ticker-schedule">次回配信 7/24（金）22:00〜</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span><span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span id="ticker-schedule">次回配信 7/24（金）22:00〜</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span>
+    <span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span id="ticker-schedule">次回配信 9/10（木）22:00〜</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span><span>ここからはじまるボクらの世界</span><span class="sep">◆</span><span>BGMうるさいすねぇ</span><span class="sep">◆</span><span>をやつ</span><span class="sep">◆</span><span>のじもん</span><span class="sep">◆</span><span>のやみぃ</span><span class="sep">◆</span><span>とこ</span><span class="sep">◆</span><span>ちワ</span><span class="sep">◆</span><span id="ticker-schedule">次回配信 9/10（木）22:00〜</span><span class="sep">◆</span><span>高評価・チャンネル登録よろしく！</span><span class="sep">◆</span>
   </div>
 </div>
 
@@ -832,6 +876,24 @@ footer small{font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.1em;}
    LATEST VIDEO SECTION
    ▼ 最新動画のYouTube動画IDを変更したい場合: VIDEO_ID を書き換える
    ============================================================ -->
+
+<!-- ============================================================
+   お知らせセクション
+   ============================================================ -->
+<div class="notice-section">
+  <div class="notice-inner">
+    <div class="notice-icon">📢</div>
+    <div class="notice-body">
+      <div class="notice-label">大事なお知らせ</div>
+      <div class="notice-text">
+        メンバーの<span class="notice-name">のやみぃ</span>は、今年中は活動を休止します。<br>
+        心待ちにしてくださっているリスナーの皆さんには大変申し訳ありませんが、<br>
+        来年には元気に戻ってくる予定です。どうかもう少しだけお待ちください！
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="latest-section">
   <div class="latest-inner reveal">
     <div class="latest-header">
@@ -839,16 +901,16 @@ footer small{font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.1em;}
       <div class="latest-title">最新動画・配信</div>
     </div>
     <!-- ▼ 最新動画を更新する場合: VIDEO_ID と TITLE を書き換える -->
-    <a href="https://www.youtube.com/watch?v=AemKzdiPNkI"
+    <a href="https://www.youtube.com/watch?v=AylYsgGO2wY"
        target="_blank" rel="noopener"
        class="latest-thumb-link">
       <div class="latest-thumb-wrap">
         <img
-          src="https://i.ytimg.com/vi/AemKzdiPNkI/maxresdefault.jpg"
+          src="https://i.ytimg.com/vi/AylYsgGO2wY/maxresdefault.jpg"
           alt="【ここボク】LIVE配信"
           class="latest-thumb-img"
           loading="lazy"
-          onerror="this.src='https://i.ytimg.com/vi/AemKzdiPNkI/hqdefault.jpg'">
+          onerror="this.src='https://i.ytimg.com/vi/AylYsgGO2wY/hqdefault.jpg'">
         <div class="latest-thumb-overlay">
           <div class="latest-play-btn">▶</div>
           <div class="latest-thumb-title" id="latest-title">読み込み中...</div>
@@ -1806,7 +1868,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 
 
 /* 最新動画タイトル取得 */
-fetch('https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=AemKzdiPNkI&format=json')
+fetch('https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=AylYsgGO2wY&format=json')
   .then(r => r.json())
   .then(d => {
     const el = document.getElementById('latest-title');
